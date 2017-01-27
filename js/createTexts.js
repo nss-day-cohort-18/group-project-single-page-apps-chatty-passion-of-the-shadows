@@ -24,6 +24,8 @@ var Chatty = (function(createTexts) {
 
 	//Grabbing HTML elements needed for this function. 
 	var createHtmlElements = {
+		//The box for id#new-message element
+		userInput: document.getElementById("new-message"),
 		//Actual VALUE of userText input
 		userTextInput: document.getElementById("new-message").value,
 		//Parent Div to attach created messages to
