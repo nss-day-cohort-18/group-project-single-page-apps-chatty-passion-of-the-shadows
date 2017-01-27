@@ -112,15 +112,3 @@ var Chatty = (function(createTexts) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
