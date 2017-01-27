@@ -35,12 +35,12 @@ var Chatty = (function(removeTexts) {
 
 	removeTexts.deleteClick = function () {
 		var elementClicked = event.target;
-		 var wrapper = document.getElementById("message-display");
+		var wrapper = document.getElementById("message-display");
 		if (elementClicked.classList.contains("delete-button")) {
 			elementClicked.parentElement.remove();
 		} else if (elementClicked.id ==="clear-button") {
 			if (wrapper.hasChildNodes()) {
-	            elementClicked.classList.toggle("hidden");
+	            elementClicked.classList.toggle("hide");
 	            while (wrapper.firstChild) {
 	                wrapper.removeChild(wrapper.firstChild);
 	            }

@@ -44,7 +44,7 @@ var Chatty = (function(createTexts) {
 		//Re-applying visuals to delete-all button
 		var wrapper = createHtmlElements.messageDisplayWrapper;
 		if (wrapper.firstChild !== true) {
-			createHtmlElements.deleteButton.classList.toggle("hidden");
+			createHtmlElements.deleteButton.classList.toggle("hide");
 		}
 	};
 
