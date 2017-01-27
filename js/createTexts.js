@@ -45,7 +45,7 @@ var Chatty = (function(createTexts) {
 		//3. Create elements and append them
 		//	 to createHtmlElements.messageDisplayWrapper
 		if (event.key == "Enter") {
-			if (createHtmlElements.userInput.value === "") {
+			if (createHtmlElements.userInput.innerHTML.length === 0) {
 				alert("How 'bout ya say somethin dummy?");
 			} else {
 				//Pushing the entered text into the create
