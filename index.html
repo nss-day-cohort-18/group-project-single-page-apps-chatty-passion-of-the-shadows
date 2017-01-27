@@ -4,9 +4,52 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Chatty</title>
-        <link rel="stylesheet" type="css/main.css" href="">
+        <link rel="stylesheet" type="css/main.css" href="#">
+		<link  rel="stylesheet" href="dist/css/materialize.min.css"></link>
+		<script type="text/javascript" src="dist/jquery.min.js"></script>
+		<script type="text/javascript" src="dist/js/materialize.min.js"></script>
     </head>
     <body>
+		<div class="row" id="nav-wrapper">
+			<h1 class="col s12 center-align logo">Chatty</h1>
+
+	        <div class="input-field col s12">
+	          <textarea id="new-message" class="materialize-textarea indigo lighten-4"></textarea>
+	          <label for="new-message">Enter Message Here:</label>
+	        </div>
+
+	        <button type="button" class="btn btn-lg waves-effect waves-teal indigo col offset-s2 s8" id="clear-button">Clear Message Board</button>
+			      
+		</div>
+		<div class="row" id="style-wrapper">
+			<p class=" center-align">
+		      <input type="checkbox" class="filled-in" id="dark-box"/>
+		      <label for="dark-box">Dark Theme</label>
+		    </p>
+		    <p class="center-align">
+		      <input type="checkbox" class="filled-in" id="large-box"/>
+		      <label for="large-box">Large Text</label>
+		    </p>
+		</div>
+		<div class="row" id="message-wrapper">
+			<h4 class="center-align" id="message-header">Messages:</h4>
+			<div class="col s10 offset-s1 card-panel indigo lighten-2" id="message-display">
+				
+		
+			<article class="message-card col s12 valign-wrapper card-panel indigo lighten-4"><p class="text-message flow-text col s8 valign">hfhfdjshfakjdhfkj</p><button class="delete-button btn btn-lg indigo col s4 valign">Delete</button></article>
+			
+			<article class="message-card col s12 valign-wrapper card-panel indigo lighten-4"><p class="text-message flow-text col s8 valign push-s4 right-align">hfhfdjshfakjdhfkj</p><button class="delete-button btn btn-lg indigo col s4 valign pull-s8">Delete</button></article>
+			
+
+
+
+			</div>
+
+		</div>
+
+
+
+		
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
