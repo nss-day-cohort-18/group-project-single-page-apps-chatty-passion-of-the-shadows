@@ -7,22 +7,23 @@
 		<link  rel="stylesheet" href="dist/css/materialize.min.css">
 		<script type="text/javascript" src="dist/jquery.min.js"></script>
 		<script type="text/javascript" src="dist/js/materialize.min.js"></script>
-		<link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
+        <div class="navbar-fixed">
+        	<nav>
+    			<div class="row" id="nav-wrapper">
+    				<h1 class="col s12 center-align logo">Chatty</h1>
 
-    	<nav>
-			<div class="row" id="nav-wrapper">
-				<h1 class="logo">Chatty</h1>
-
-		        <div class="input-field col s12">
-		          <textarea id="new-message" class="materialize-textarea indigo lighten-4"></textarea>
-		          <label for="new-message">Enter Message Here:</label>
-		        </div>
-		        <button type="button" id="clear-button">Clear Message Board</button>
-			</div>
-    	</nav>
-
+    		        <div class="input-field col s12">
+    		          <textarea id="new-message" class="materialize-textarea indigo lighten-4"></textarea>
+    		          <label for="new-message">Enter Message Here:</label>
+    		        </div>
+    		        <button type="button" class="btn btn-lg waves-effect waves-teal indigo col offset-s2 s8" id="clear-button">Clear Message Board</button>
+    			</div>
+        	</nav>
+        </div>
 		<div class="row" id="style-wrapper">
 			<p class=" center-align">
 		      <input type="checkbox" class="filled-in" id="dark-box"/>
@@ -36,6 +37,7 @@
 		<div class="row" id="message-wrapper">
 			<h4 class="center-align" id="message-header">Messages:</h4>
 
+
 			<div class="message-display-indigo" id="message-display">
 				
 		
@@ -43,6 +45,7 @@
 			
 			<article class="message-card"><p class="text-message">hfhfdjshfakjdhfkj</p><button class="delete-button">Delete</button></article>
 		
+
 
 			</div>
 

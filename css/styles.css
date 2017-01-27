@@ -6387,3 +6387,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     margin-bottom: 5em; } }
 
 /*# sourceMappingURL=styles.css.map */
+
+#style-wrapper {
+    margin-top: 300px;
+}
+
+nav {
+    height: 325px;
+    background-color: #6775BB;
+}
