@@ -35,12 +35,15 @@ var Chatty = (function(removeTexts) {
 		 var wrapper = document.getElementById("message-display");
 		if (elementClicked.classList.contains("delete-button")) {
 			elementClicked.parentElement.remove();
-		} else if (wrapper.hasChildNodes()) {
-            elementClicked.classList.toggle("hidden");
-            while (wrapper.firstChild) {
-                wrapper.removeChild(wrapper.firstChild);
-            }
-        };
+		} else if (elementClicked.id ==="clear-button") {
+			if (wrapper.hasChildNodes()) {
+	            elementClicked.classList.toggle("hidden");
+	            while (wrapper.firstChild) {
+	                wrapper.removeChild(wrapper.firstChild);
+	            }
+	        }
+		};
+
 	};
 
 
