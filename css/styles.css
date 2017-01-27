@@ -1,3 +1,12 @@
 
 
 /*# sourceMappingURL=styles.css.map */
+
+#style-wrapper {
+    margin-top: 300px;
+}
+
+nav {
+    height: 325px;
+    background-color: #6775BB;
+}
