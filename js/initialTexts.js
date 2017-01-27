@@ -21,7 +21,7 @@ var Chatty = (function(initialTexts) {
 
 	//Object that  contains all HTML elements needed 
 	//for this IIFE
-	//Chatty.returnInitialHTMLElements("textMessages");
+ 
 	var initialHtmlElements = {
 		textMessages: document.getElementsByClassName("text-message"),
 		messageDisplay: document.getElementById("message-display")
@@ -40,49 +40,56 @@ var Chatty = (function(initialTexts) {
 	];
 
 	var preMessageKeys = Object.keys(preMessages[0]);
-	var preMessageValues = Object.keys(preMessages[0]);
-
+	var preMessageValues = Object.values(preMessages[0]);
 	//===============================//
 	//===========FUNCTIONS===========//
 	//===============================//
-
-	//Generic function to create new message Card
-	initialTexts.loadElement = function(index ){
-		var messageCount = undefined;
-		initialHtmlElements.messageDisplay += newCard;
-		messageCount = document.getElementsByClassName("message-card");
-		messageCount[messageCount.length-1].setAttribute("id", `message${index}`);
-
-		return messageCount;	
-	};
-
-	//Generic functionality to return messages
-	initialTexts.returnMessage = function(key ){
-		var message = preMessages[key];
 	
+	//Generic functionality to return messages
+	initialTexts.returnMessage = function(index ){
+		var message = preMessageValues[index];
+		// console.log('returnMessage output ', message);
+		
 		return message;
 	};
 
+	//Generic function to create new message Card
+	initialTexts.loadElement = function(index ){
+
+		var messageCard;
+		initialHtmlElements.messageDisplay.innerHTML += newCard;
+		var messageCards = document.getElementsByClassName("message-card");
+		var targetCard = messageCards[messageCards.length-1];
+		targetCard.setAttribute("id", ` message${index}`);
+		// console.log('targetCard = ', targetCard);
+		
+		return targetCard;	
+	};
+
+
 	//Prints a message to a specific message card
 	initialTexts.printMessage = function(messageElement, message ){
+		
 		var cardChildren = messageElement.childNodes;
-
+		console.log(cardChildren);
+		// console.log(message);
 		cardChildren.forEach(function(value, index, array){
-			if (array[index].hasAttribute('class="text-message"')) {
-				array[index].innerHTML += message;
+			
+			// console.log(value, array[index]);
+			if (value.nodeName === 'P') {
+				value.innerHTML = message;
 			}
 		});
 
 		console.log('Printed: ', message);
-
 	};
 
 	//Combine the previous three functions to print to screen
 	initialTexts.loadPreMessages = function( ){
 		for (var i = 0; i < preMessageKeys.length; i++) {
-			var message = Chatty.returnMessage(preMessageKeys[i]);
-			console.log(message)
-			var target = Chatty.loadElement();
+			var message = Chatty.returnMessage(i);
+			var target = Chatty.loadElement(i);
+
 			Chatty.printMessage(target, message);
 		};
 	};

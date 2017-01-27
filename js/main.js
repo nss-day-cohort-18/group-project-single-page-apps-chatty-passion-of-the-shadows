@@ -1,1 +1,1 @@
-Chatty.loadPreMessages;
+Chatty.loadPreMessages();
