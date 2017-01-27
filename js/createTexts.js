@@ -14,12 +14,6 @@ var Chatty = (function(createTexts) {
 	//Start-up to make sure it works
 	var myText2 = "It's working.";
 
-	//Card to be created when enter key is pressed
-	var newCard =  `<article class="message-card">
-					<p class="text-message"></p>
-					<button class="delete-button">Delete</button>
-					</article>`;
-
 	//Array to hold ALL text messages created
 	//Used in readTextMessages function
 	var createdTexts = [];
@@ -57,12 +51,17 @@ var Chatty = (function(createTexts) {
 				//Pushing the entered text into the create
 				createdTexts.push(createHtmlElements.userInput.value);
 
-				var myCard = newCard;
-				//Appending newCard to message-wrapper
-				createHtmlElements.messageDisplayWrapper.appendChild(myCard);
 
+				var text = createHtmlElements.userInput.value;
+				//Establishing layout of the new card
+				var newCard = `<article class="message-card">
+					<p class="text-message">${text}</p>
+					<button class="delete-button">Delete</button>
+					</article>`;
 
-
+				//Appending the layout to the wrapper
+				createHtmlElements.messageDisplayWrapper.innerHTML += newCard;
+				//Re-esablishing the text input value to nothing
 				createHtmlElements.userInput.value = "";
 			}
 		}
