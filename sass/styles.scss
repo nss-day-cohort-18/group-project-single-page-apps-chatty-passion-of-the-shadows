@@ -44,5 +44,60 @@
 
 
 
+.message-card {
+	@extend .col;
+	@extend .s12;
+	@extend .valign-wrapper;
+	@extend .card-panel;
+	@extend .indigo;
+	@extend .lighten-4;
+	@extend .row;
+}
+
+.text-message {
+	@extend .flow-text;
+	@extend .col;
+	@extend .s8;
+	@extend .valign;
+}
+
+
+.delete-button {
+	@extend .btn;
+	@extend .indigo;
+	@extend .col;
+	@extend .s4;
+	@extend .valign;
+}
+
+#message-display {
+	@extend .col;
+	@extend .s10;
+	@extend .offset-s1;
+	@extend .card-panel; 
+}
+
+.message-display-indigo {
+	@extend .indigo;
+	@extend .lighten-2;
+}
+
+#clear-button {
+	@extend .btn;
+	@extend .waves-effect;
+	@extend .waves-teal;
+	@extend .indigo;
+	@extend .col;
+	@extend .offset-s2;
+	@extend .s8;
+}
+
+.logo {
+	@extend .col;
+	@extend .s12;
+	@extend .center-align;
+}
+
+
 
 
