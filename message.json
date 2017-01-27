@@ -1,0 +1,37 @@
+[
+    {
+        "class": {
+        	"messageClass": "",
+        	"buttonClass": ""
+        	},
+        "message": "Hello World!"
+    },
+    {
+        "class": {
+        	"messageClass": "push-s4 right-align",
+        	"buttonClass": "pull-s8"
+        	},
+        "message": "How's it going?!"
+    },
+    {
+        "class": {
+        	"messageClass": "",
+        	"buttonClass": ""
+        	},
+        "message": "FOQIENFSALDNVCMNVQO, FSDJN, DASFINDSA, FOQER, DANVA, OEF, aodhfbfqjf01923s/f.r13ina8sffadf12f a f   dsafssd as feqr adzg bfdg q"
+    },
+    {
+        "class": {
+        	"messageClass": "push-s4 right-align",
+        	"buttonClass": "pull-s8"
+        	},
+        "message": "...What?"
+    },
+    {
+        "class": {
+        	"messageClass": "",
+        	"buttonClass": ""
+        	},
+        "message": "Sorry, my cat fell on my keyboard."
+    }
+]
