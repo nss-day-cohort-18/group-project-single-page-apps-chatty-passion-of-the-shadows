@@ -41,6 +41,7 @@ var Chatty = (function(initialTexts) {
 
 	var preMessageKeys = Object.keys(preMessages[0]);
 	var preMessageValues = Object.values(preMessages[0]);
+
 	//===============================//
 	//===========FUNCTIONS===========//
 	//===============================//
@@ -85,7 +86,9 @@ var Chatty = (function(initialTexts) {
 	};
 
 	//Combine the previous three functions to print to screen
-	initialTexts.loadPreMessages = function( ){
+
+	initialTexts.loadPreMessages = function(messageObject ){
+
 		for (var i = 0; i < preMessageKeys.length; i++) {
 			var message = Chatty.returnMessage(i);
 			var target = Chatty.loadElement(i);
