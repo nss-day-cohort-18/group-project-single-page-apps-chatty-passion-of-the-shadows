@@ -23,6 +23,7 @@
   "homepage": "https://github.com/nss-day-cohort-18/group-project-single-page-apps-chatty-passion-of-the-shadows#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
