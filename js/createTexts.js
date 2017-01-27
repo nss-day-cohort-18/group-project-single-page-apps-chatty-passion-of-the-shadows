@@ -16,18 +16,12 @@ var Chatty = (function(createTexts) {
 
 	//Array to hold ALL text messages created
 	//Used in readTextMessages function
-	var createdTexts = [
-		{
-			id1: "placeholder text input"
-		}
-	];
+	var createdTexts = [];
 
 	//Grabbing HTML elements needed for this function. 
 	var createHtmlElements = {
 		//The box for id#new-message element
 		userInput: document.getElementById("new-message"),
-		//Actual VALUE of userText input
-		userTextInput: document.getElementById("new-message").value,
 		//Parent Div to attach created messages to
 		messageDisplayWrapper: document.getElementById("message-display"),
 		//HTML Collection of all delete buttons created (IDK if we'll need this)
@@ -45,13 +39,32 @@ var Chatty = (function(createTexts) {
 	};
 
 	//Function to create Text Cards
-	createTexts.createTextMessages = function(elementId, userMessage) {
+	createTexts.createTextMessages = function() {
 		//1. Check if user presses enter key
 		//2. Store userMessage in createdTexts array
 		//3. Create elements and append them
 		//	 to createHtmlElements.messageDisplayWrapper
-		var whatThisDoes = "createTextMessages() works. Location: createTexts.js";
-		console.log(whatThisDoes);
+		if (event.key == "Enter") {
+			if (createHtmlElements.userInput.value === "") {
+				alert("How 'bout ya say somethin dummy?");
+			} else {
+				//Pushing the entered text into the create
+				createdTexts.push(createHtmlElements.userInput.value);
+
+
+				var text = createHtmlElements.userInput.value;
+				//Establishing layout of the new card
+				var newCard = `<article class="message-card">
+					<p class="text-message">${text}</p>
+					<button class="delete-button">Delete</button>
+					</article>`;
+
+				//Appending the layout to the wrapper
+				createHtmlElements.messageDisplayWrapper.innerHTML += newCard;
+				//Re-esablishing the text input value to nothing
+				createHtmlElements.userInput.value = "";
+			}
+		}
 	};
 
 	//This function reads texts back to you from createdTexts array
@@ -74,4 +87,30 @@ var Chatty = (function(createTexts) {
 	return createTexts;
 
 })(Chatty || {});
+
+
+//=====================================//
+//===========EVENT-LISTENERS===========//
+//=====================================//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

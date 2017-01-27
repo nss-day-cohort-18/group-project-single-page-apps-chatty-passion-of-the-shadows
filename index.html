@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
+
         <div class="navbar-fixed">
         	<nav>
     			<div class="row" id="nav-wrapper">
     				<h1 class="col s12 center-align logo">Chatty</h1>
-
     		        <div class="input-field col s12">
-    		          <textarea id="new-message" class="materialize-textarea indigo lighten-4"></textarea>
+    		          <textarea id="new-message" class="materialize-textarea indigo lighten-4" onkeyup="Chatty.createTextMessages()"></textarea>
     		          <label for="new-message">Enter Message Here:</label>
     		        </div>
     		        <button type="button" class="btn btn-lg waves-effect waves-teal indigo col offset-s2 s8" id="clear-button">Clear Message Board</button>
