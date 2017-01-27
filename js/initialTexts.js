@@ -4,11 +4,17 @@
 //This function takes JSON file (holds preset messages)
 //and returns the value
 
+
 var Chatty = (function(initialTexts) {
 
 	//===============================//
 	//===========VARIABLES===========//
 	//===============================//
+	
+	var newCard =  `<article class="message-card">
+	                    <p class="text-message"></p>
+	                    <button class="delete-button">Delete</button>
+	                </article>` 
 
 	//Start-up to make sure it works
 	var myText1 = "It's working.";
@@ -17,11 +23,12 @@ var Chatty = (function(initialTexts) {
 	//for this IIFE
 	//Chatty.returnInitialHTMLElements("textMessages");
 	var initialHtmlElements = {
-		textMessages: document.getElementsByClassName("text-message")
+		textMessages: document.getElementsByClassName("text-message"),
+		messageDisplay: document.getElementById("message-display")
 	};
 
 	//JSON format that holds all of our pre-messages.
-	//Chatty.returnPreMessages("message1");
+	//Chatty.returnPreMessages`messagei`);
 	var preMessages = [
 		{
 			message1: "Pre-message-1",
@@ -32,31 +39,53 @@ var Chatty = (function(initialTexts) {
 		}
 	];
 
+	var preMessageKeys = Object.keys(preMessages[0]);
+	var preMessageValues = Object.keys(preMessages[0]);
 
 	//===============================//
 	//===========FUNCTIONS===========//
 	//===============================//
 
-	//Start-up function tomake sure it's connected.
-	initialTexts.makeSureItWorks = function() {
-		console.log(myText1, " Location: initialTexts.js");
+	//Generic function to create new message Card
+	initialTexts.loadElement = function(index ){
+		var messageCount = undefined;
+		initialHtmlElements.messageDisplay += newCard;
+		messageCount = document.getElementsByClassName("message-card");
+		messageCount[messageCount.length-1].setAttribute("id", `message${index}`);
+
+		return messageCount;	
 	};
 
-	//Test function to target id#text-message
-	initialTexts.returnInitialHtmlElements = function(htmlElement) {
-		console.log("returnInitialHtmlElements() works. Location: initialTexts.js");
-		//To test: Chatty.returnInitialHtmlElements["textMessages"];
-		return initialHtmlElements[htmlElement];
+	//Generic functionality to return messages
+	initialTexts.returnMessage = function(key ){
+		var message = preMessages[key];
+	
+		return message;
 	};
 
-	//Function that returns pre-saved messages
-	//Goes inside first 5 "text-messages"
-	initialTexts.returnPreMessages = function(word) {
-		console.log("returnPreMessages() works. Location: initialTexts.js");
-		//To test: Chatty.returnPreMessages("message1");
-		return preMessages[0][word];
+	//Prints a message to a specific message card
+	initialTexts.printMessage = function(messageElement, message ){
+		var cardChildren = messageElement.childNodes;
+
+		cardChildren.forEach(function(value, index, array){
+			if (array[index].hasAttribute('class="text-message"')) {
+				array[index].innerHTML += message;
+			}
+		});
+
+		console.log('Printed: ', message);
+
 	};
 
+	//Combine the previous three functions to print to screen
+	initialTexts.loadPreMessages = function( ){
+		for (var i = 0; i < preMessageKeys.length; i++) {
+			var message = Chatty.returnMessage(preMessageKeys[i]);
+			console.log(message)
+			var target = Chatty.loadElement();
+			Chatty.printMessage(target, message);
+		};
+	};
 
 	//============================//
 	//===========RETURN===========//
@@ -65,3 +94,5 @@ var Chatty = (function(initialTexts) {
 	return initialTexts;
 
 })(Chatty || {});
+
+
