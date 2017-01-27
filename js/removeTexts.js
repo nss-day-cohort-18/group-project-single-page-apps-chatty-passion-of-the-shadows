@@ -1,5 +1,11 @@
 'use strict';
 
+//SEE README.md UNDER MODULAR CODE FOR MORE DETAILS
+//This function is to remove text cards from 
+//the DOM.
+//It also removes created messages from array in 
+//createTexts.js when deleted
+
 var Chatty = (function(removeTexts) {
 
 	//===============================//

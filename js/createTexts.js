@@ -1,7 +1,9 @@
 'use strict';
 
 //SEE README.md UNDER MODULAR CODE FOR MORE DETAILS
-//
+//This function is to create text cards and 
+//append them to the DOM. 
+//Also holds all created texts within an Array
 
 var Chatty = (function(createTexts) {
 
