@@ -18,13 +18,16 @@ var Chatty = (function(removeTexts) {
 	//All HTML elements needed for this removeTexts function
 	var removeHtmlElements = {
 		//To delete 
-		textCards: document.getElementsByClassName("message-card")
+		textCards: document.getElementsByClassName("message-card"),
+		//Message wrapper
+		messageWrapper: document.getElementById("message-display"),
 	};
 
 
 	//===============================//
 	//===========FUNCTIONS===========//
 	//===============================//
+
 
 	removeTexts.makeSureItWorks3 = function() {
 		console.log(myText3, " Location: removeTexts.js");
@@ -44,6 +47,7 @@ var Chatty = (function(removeTexts) {
 		var thisWorks = "removeMessageFromArray() works. Location: removeTexts.js";
 		console.log(thisWorks);
 	};
+
 
 	//============================//
 	//===========RETURN===========//
