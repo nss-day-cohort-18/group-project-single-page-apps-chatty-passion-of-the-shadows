@@ -1,9 +1,9 @@
 'use strict';
 
 //SEE README.md UNDER MODULAR CODE FOR MORE DETAILS
-//This function is to remove text cards from 
+//This function is to remove text cards from
 //the DOM.
-//It also removes created messages from array in 
+//It also removes created messages from array in
 //createTexts.js when deleted
 
 var Chatty = (function(removeTexts) {
@@ -20,7 +20,7 @@ var Chatty = (function(removeTexts) {
 		//To delete 
 		textCards: document.getElementsByClassName("message-card"),
 		//Message wrapper
-		messageWrapper: document.getElementById("message-display"),
+		messageWrapper: document.getElementById("message-display")
 	};
 
 
@@ -33,16 +33,33 @@ var Chatty = (function(removeTexts) {
 		console.log(myText3, " Location: removeTexts.js");
 	};
 
+	removeTexts.deleteClick = function () {
+		var elementClicked = event.target;
+		 var wrapper = document.getElementById("message-display");
+		if (elementClicked.classList.contains("delete-button")) {
+			elementClicked.parentElement.remove();
+		} else if (elementClicked.id ==="clear-button") {
+			if (wrapper.hasChildNodes()) {
+	            elementClicked.classList.toggle("hidden");
+	            while (wrapper.firstChild) {
+	                wrapper.removeChild(wrapper.firstChild);
+	            }
+	        }
+		};
+
+	};
+
+
 	removeTexts.removeTextCard = function(textCardId) {
-		//This gets connected via Event Listener to 
+		//This gets connected via Event Listener to
 		//each delete button created on text card
 		//.addEventListener("click", Chatty.removeTextCard(textCardId));
 		var makeSureItsConnected = "removeTextCard() works. Location: removeTexts.js";
 		console.log(makeSureItsConnected);
 	};
-		
+
 	removeTexts.removeMessageFromArray = function() {
-		//This function removes private message from createdTexts array 
+		//This function removes private message from createdTexts array
 		//within createTexts.js
 		var thisWorks = "removeMessageFromArray() works. Location: removeTexts.js";
 		console.log(thisWorks);

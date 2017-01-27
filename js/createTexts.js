@@ -1,8 +1,8 @@
 'use strict';
 
 //SEE README.md UNDER MODULAR CODE FOR MORE DETAILS
-//This function is to create text cards and 
-//append them to the DOM. 
+//This function is to create text cards and
+//append them to the DOM.
 //Also holds all created texts within an Array
 
 var Chatty = (function(createTexts) {
@@ -18,7 +18,7 @@ var Chatty = (function(createTexts) {
 	//Used in readTextMessages function
 	var createdTexts = [];
 
-	//Grabbing HTML elements needed for this function. 
+	//Grabbing HTML elements needed for this function.
 	var createHtmlElements = {
 		//Delete All Button
 		deleteButton: document.getElementById("clear-button"),
@@ -104,8 +104,6 @@ var Chatty = (function(createTexts) {
 //=====================================//
 //===========EVENT-LISTENERS===========//
 //=====================================//
-
-
 
 
 

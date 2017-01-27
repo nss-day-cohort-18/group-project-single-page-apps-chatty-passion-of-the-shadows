@@ -6385,14 +6385,40 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @media (min-height: 40.125em) {
   .picker--time .picker__box {
     margin-bottom: 5em; } }
+.logo {
+  font-size: 3em;
+  margin: 0 0 .5em 0;
+  padding: 0; }
 
-/*# sourceMappingURL=styles.css.map */
+.large-text {
+  font-size: 4em; }
+
+.hidden {
+  display: none; }
 
 #style-wrapper {
-    margin-top: 300px;
-}
+  line-height: 1em;
+  margin-top: 1em; }
+
+#new-message {
+  margin: 0 0 .5em 0;
+  padding: 0;
+  line-height: 1em; }
+
+.checkbox {
+  margin: 0;
+  padding: 0; }
+
+#message-wrapper {
+  margin-top: 150px; }
+
+#nav-wrapper {
+  margin-bottom: 0; }
 
 nav {
-    height: 325px;
-    background-color: #6775BB;
-}
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: #6775BB; }
+
+/*# sourceMappingURL=styles.css.map */
