@@ -1,8 +1,8 @@
 'use strict';
 
 //SEE README.md UNDER MODULAR CODE FOR MORE DETAILS
-//This function is to create text cards and 
-//append them to the DOM. 
+//This function is to create text cards and
+//append them to the DOM.
 //Also holds all created texts within an Array
 
 var Chatty = (function(createTexts) {
@@ -18,8 +18,10 @@ var Chatty = (function(createTexts) {
 	//Used in readTextMessages function
 	var createdTexts = [];
 
-	//Grabbing HTML elements needed for this function. 
+	//Grabbing HTML elements needed for this function.
 	var createHtmlElements = {
+		//Delete All Button
+		deleteButton: document.getElementById("clear-button"),
 		//The box for id#new-message element
 		userInput: document.getElementById("new-message"),
 		//Parent Div to attach created messages to
@@ -38,6 +40,14 @@ var Chatty = (function(createTexts) {
 		console.log(myText2, " Location: createTexts.js");
 	};
 
+	createTexts.toggleDeleteButtonVisibility = function() {
+		//Re-applying visuals to delete-all button
+		var wrapper = createHtmlElements.messageDisplayWrapper;
+		if (wrapper.firstChild !== true) {
+			createHtmlElements.deleteButton.classList.toggle("hidden");
+		}
+	};
+
 	//Function to create Text Cards
 	createTexts.createTextMessages = function() {
 		//1. Check if user presses enter key
@@ -45,9 +55,11 @@ var Chatty = (function(createTexts) {
 		//3. Create elements and append them
 		//	 to createHtmlElements.messageDisplayWrapper
 		if (event.key == "Enter") {
-			if (createHtmlElements.userInput.innerHTML.length === 0) {
+			if (createHtmlElements.userInput.value.length === 0) {
 				alert("How 'bout ya say somethin dummy?");
 			} else {
+
+				createTexts.toggleDeleteButtonVisibility();
 				//Pushing the entered text into the create
 				createdTexts.push(createHtmlElements.userInput.value);
 
@@ -92,8 +104,6 @@ var Chatty = (function(createTexts) {
 //=====================================//
 //===========EVENT-LISTENERS===========//
 //=====================================//
-
-
 
 
 
