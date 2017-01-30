@@ -54,6 +54,13 @@
 	@extend .row;
 }
 
+.message-card-dark {
+	@extend .message-card;
+	@extend .grey;
+	@extend .darken-3;
+	color: #fff;
+}
+
 .text-message {
 	@extend .flow-text;
 	@extend .col;
@@ -70,26 +77,45 @@
 	@extend .valign;
 }
 
+.delete-button-dark {
+	@extend .delete-button;
+	@extend .grey;
+	@extend .lighten-3;
+	color: #000;
+}
+
 #message-display {
 	@extend .col;
 	@extend .s10;
 	@extend .offset-s1;
 	@extend .card-panel; 
-}
-
-.message-display-indigo {
 	@extend .indigo;
 	@extend .lighten-2;
+}
+
+.message-display-dark {
+	@extend .grey;
+	@extend .lighten-3;
 }
 
 #clear-button {
 	@extend .btn;
 	@extend .waves-effect;
 	@extend .waves-teal;
-	@extend .indigo;
 	@extend .col;
 	@extend .offset-s2;
 	@extend .s8;
+}
+
+.clear-button-indigo {
+	@extend .indigo;
+}
+
+.clear-button-dark {
+	@extend .clear-button-indigo;
+	@extend .grey;
+	@extend .darken-3;
+	@extend .waves-light;
 }
 
 .logo {
@@ -99,7 +125,6 @@
 	font-size: 3em;
 	margin: 0 0 .5em 0;
 	padding: 0;
-
 }
 
 .large-text {
@@ -124,7 +149,14 @@
 }
 
 #message-wrapper {
-	margin-top: 150px;
+	padding-top: 150px;
+	@extend .row;
+}
+
+.message-wrapper-dark {
+	@extend .grey;
+	@extend .darken-3;
+	color: #fff;
 }
 
 #nav-wrapper {
@@ -137,3 +169,26 @@ nav {
     padding: 0;
     background-color: #6775BB;
 }
+
+.nav-dark {
+	@extend .grey;
+	@extend .lighten-3;
+	color: #000;
+}
+
+.materialize-textarea {
+	@extend .indigo;
+	@extend .lighten-4;
+}
+
+.materialize-textarea-dark {
+	@extend .materialize-textarea;
+	@extend .grey;
+	@extend .darken-3;
+	color: #fff;
+}
+
+
+
+
+
