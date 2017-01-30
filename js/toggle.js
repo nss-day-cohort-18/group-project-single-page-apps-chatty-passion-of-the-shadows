@@ -38,4 +38,22 @@ function toggleStyles(){
 		}
 	console.log(elementsToToggle)
 	}
-}
+};
+
+
+
+
+
+
+
+
+function toggleLargeText() {
+	var textMessageElements = document.getElementsByClassName("text-message");
+	for (var i = 0; i < textMessageElements.length; i++) {
+		if (event.target.checked === false){
+			textMessageElements.item(i).classList.remove("large-text");
+		} else {
+			textMessageElements.item(i).classList.add("large-text");
+		}
+	};
+};
