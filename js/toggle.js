@@ -49,7 +49,6 @@ function toggleStyles(){
 
 function toggleLargeText() {
 	var textMessageElements = document.getElementsByClassName("text-message");
-	console.log(event.target.checked)
 	for (var i = 0; i < textMessageElements.length; i++) {
 		if (event.target.checked === false){
 			textMessageElements.item(i).classList.remove("large-text");
