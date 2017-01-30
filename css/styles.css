@@ -5189,7 +5189,8 @@ nav {
 button {
   border-bottom: 1px solid #009688 !important; }
 
-.backdrop {
+.backdrop,
+.modal-overlay {
   background-color: #009688; }
 
 /*# sourceMappingURL=styles.css.map */
