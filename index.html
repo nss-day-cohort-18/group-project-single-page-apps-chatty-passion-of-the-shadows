@@ -17,13 +17,13 @@
     			<div class="row" id="nav-wrapper">
     				<h1 class="col s6 center-align logo">Chatty</h1>
     		        <div class="input-field col s5 offset-1s">
-    		          <textarea id="new-message" class="materialize-textarea indigo lighten-4" onkeyup="Chatty.createTextMessages()"></textarea>
+    		          <textarea id="new-message" class="materialize-textarea" onkeyup="Chatty.createTextMessages()"></textarea>
     		          <label for="new-message">Enter Message Here:</label>
     		        </div>
             
     		        <div class="row" id="style-wrapper">
     		        	<div class="col s4">
-    		        		<button type="button" id="clear-button">Clear Message Board</button>
+    		        		<button type="button" class="clear-button-indigo" id="clear-button">Clear Message Board</button>
     		        	</div>
     		        	<p class="col s4 checkbox">
 					      <input type="checkbox" class="filled-in" id="dark-box"/>
@@ -38,9 +38,9 @@
         	</nav>	
         </div>
 
-		<div class="row" id="message-wrapper">
+		<div id="message-wrapper">
 			<h4 class="center-align" id="message-header">Messages:</h4>
-			<div class="message-display-indigo" id="message-display">
+			<div id="message-display">
                 
             </div>
 		</div>
