@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="css/styles.css">
     </head>
-    <body onclick="Chatty.deleteClick()">
+    <body onclick="Chatty.deleteClick()" onchange="toggleLargeText()">
 
         <div class="navbar-fixed">
         	<nav id="nav">
@@ -33,7 +33,7 @@
 					      <label for="dark-box">Dark Theme</label>
 					    </p>
 					    <p class="col s4 checkbox">
-					      <input type="checkbox" class="filled-in" id="large-box" onchange="toggleLargeText()"/>
+					      <input type="checkbox" class="filled-in" id="large-box"/>
 					      <label for="large-box">Large Text</label>
 					   </p>
 					</div>
