@@ -88,7 +88,7 @@
 	@extend .col;
 	@extend .s10;
 	@extend .offset-s1;
-	@extend .card-panel; 
+	@extend .card-panel;
 	@extend .indigo;
 	@extend .lighten-2;
 }
@@ -186,6 +186,15 @@ nav {
 	@extend .grey;
 	@extend .darken-3;
 	color: #fff;
+}
+
+* {
+	font-family: 'VT323', 'Share Tech Mono', monospace;
+}
+
+#message-display {
+	// background-color: black;
+	min-height: 200px !important;
 }
 
 

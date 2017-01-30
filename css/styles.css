@@ -6456,4 +6456,10 @@ nav {
 .materialize-textarea-dark {
   color: #fff; }
 
+* {
+  font-family: 'VT323', 'Share Tech Mono', monospace; }
+
+#message-display {
+  min-height: 200px !important; }
+
 /*# sourceMappingURL=styles.css.map */
