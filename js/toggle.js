@@ -8,9 +8,10 @@ function toggleStyles(){
 	 		 document.getElementsByClassName("delete-button"),
 	 		 document.getElementById("message-display"),
 	 		 document.getElementById("message-wrapper"),
-	 		 document.getElementById("nav-element"),
+	 		 document.getElementById("nav"),
 	 		 document.getElementById("clear-button"),
-	 	     document.getElementById("new-message")
+	 	     document.getElementById("new-message"),
+	 	     document.getElementById("text-"),
 	];
 
 	for (var i = 0; i < elementsToToggle.length; i++) {
