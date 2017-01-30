@@ -48,6 +48,8 @@ var Chatty = (function(createTexts) {
 		createHtmlElements.deleteButton.classList.remove("hide");
 	};
 
+	var idCounter = 0;
+
 	//Function to create Text Cards
 	createTexts.createTextMessages = function() {
 		//1. Check if user presses enter key
@@ -55,15 +57,19 @@ var Chatty = (function(createTexts) {
 		//3. Create elements and append them
 		//	 to createHtmlElements.messageDisplayWrapper
 		if (event.key == "Enter") {
-			if (createHtmlElements.userInput.innerHTML === "") {
+			event.preventDefault();
+			if (createHtmlElements.userInput.value === "") {
 				alert("How 'bout ya say somethin dummy?");
 				createHtmlElements.userInput.value = "";
 			} else {
+				var textCard = {};
 				//Pushing the entered text into the create
-				createdTexts.push(createHtmlElements.userInput.value);
+				textCard.textInput = createHtmlElements.userInput.value;
+				textCard.cardId = "card--" + idCounter;
+				createdTexts.push(textCard);
 				var text = createHtmlElements.userInput.value;
 				//Establishing layout of the new card
-				var newCard = `<article class="message-card">
+				var newCard = `<article id="card--${idCounter}" class="message-card">
 					<p class="text-message">${text}</p>
 					<button class="delete-button">Delete</button>
 					</article>`;
@@ -74,6 +80,9 @@ var Chatty = (function(createTexts) {
 				createHtmlElements.userInput.value = "";
 				//Bring back visibility to clear-all button
 				createTexts.toggleDeleteButtonVisibility();
+				//Adding to the counter to keep a unique ID flowing
+				idCounter++;
+				console.log(createdTexts);
 			}
 		}
 	};
@@ -88,6 +97,10 @@ var Chatty = (function(createTexts) {
 	createTexts.deleteSingleText = function() {
 		var toCheckIfWorks = "deleteSingleText() works. Location: createTexts.js";
 		console.log(toCheckIfWorks);
+	};
+
+	createTexts.returnPrivateArray = function() {
+		return createdTexts;
 	};
 
 

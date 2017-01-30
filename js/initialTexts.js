@@ -14,10 +14,11 @@ var Chatty = (function(initialTexts) {
 	
 	//Card html elements for messages
 	//
+
 	var newCard =  `<article class="message-card">
 	                    <p class="text-message"></p>
 	                    <button class="delete-button">Delete</button>
-	                </article>` 
+	                </article>`; 
 
 
 	//data request object and error/completion messages.
@@ -25,7 +26,7 @@ var Chatty = (function(initialTexts) {
 	//
 	var dataRequest = new XMLHttpRequest();
 	
-	dataRequest.addEventListener('load', dataRequestComplete)
+	dataRequest.addEventListener('load', dataRequestComplete);
 	dataRequest.addEventListener('error', dataRequestFailed);
 
 	dataRequest.open('GET', 'message.json');
@@ -64,7 +65,7 @@ var Chatty = (function(initialTexts) {
 	//Generic functionality to return messages
 	//
 	initialTexts.returnMessage = function(messageObject, index ){
-		var message = messageObject[index]['message'];
+		var message = messageObject[index].message;
 		// console.log('returnMessage output ', message);
 		
 		return message;
@@ -109,7 +110,7 @@ var Chatty = (function(initialTexts) {
 			var target = Chatty.loadElement(i);
 
 			Chatty.printMessage(target, message);
-		};
+		}
 	};
 
 
