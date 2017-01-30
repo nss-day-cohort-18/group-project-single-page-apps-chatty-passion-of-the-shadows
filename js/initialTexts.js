@@ -14,6 +14,7 @@ var Chatty = (function(initialTexts) {
 	
 	//Card html elements for messages
 	//
+
 	var newCard =  `<article class="message-card">
 	                    <p class="text-message"></p>
 	                    <button class="delete-button">Delete</button>
