@@ -42,10 +42,10 @@ var Chatty = (function(createTexts) {
 
 	createTexts.toggleDeleteButtonVisibility = function() {
 		//Re-applying visuals to delete-all button
+		//This function is ONLY being called when a new text is being 
+		//created. The clear-all button already has a class of hide at this point
 		var wrapper = createHtmlElements.messageDisplayWrapper;
-		if (wrapper.firstChild !== true) {
-			createHtmlElements.deleteButton.classList.toggle("hidden");
-		}
+		createHtmlElements.deleteButton.classList.remove("hide");
 	};
 
 	//Function to create Text Cards
@@ -58,12 +58,8 @@ var Chatty = (function(createTexts) {
 			if (createHtmlElements.userInput.value.length === 0) {
 				alert("How 'bout ya say somethin dummy?");
 			} else {
-
-				createTexts.toggleDeleteButtonVisibility();
 				//Pushing the entered text into the create
 				createdTexts.push(createHtmlElements.userInput.value);
-
-
 				var text = createHtmlElements.userInput.value;
 				//Establishing layout of the new card
 				var newCard = `<article class="message-card">
@@ -75,6 +71,8 @@ var Chatty = (function(createTexts) {
 				createHtmlElements.messageDisplayWrapper.innerHTML += newCard;
 				//Re-esablishing the text input value to nothing
 				createHtmlElements.userInput.value = "";
+				//Bring back visibility to clear-all button
+				createTexts.toggleDeleteButtonVisibility();
 			}
 		}
 	};
@@ -104,18 +102,6 @@ var Chatty = (function(createTexts) {
 //=====================================//
 //===========EVENT-LISTENERS===========//
 //=====================================//
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
