@@ -17,7 +17,7 @@ var Chatty = (function(removeTexts) {
 
 	//All HTML elements needed for this removeTexts function
 	var removeHtmlElements = {
-		//To delete 
+		//To delete
 		textCards: document.getElementsByClassName("message-card"),
 		//Message wrapper
 		messageWrapper: document.getElementById("message-display")
@@ -49,15 +49,15 @@ var Chatty = (function(removeTexts) {
 			var theArray = Chatty.returnPrivateArray();
 			//For each card in array..
 			for (var cardIndex = 0; cardIndex < theArray.length; cardIndex++) {
-				//If the looged id in the array 
+				//If the looged id in the array
 				//is equal to the id of the card being deleted
-				if (theArray[cardIndex]["cardId"] === parentId) {
+				if (theArray[cardIndex].cardId === parentId) {
 					//splice out the object within the array
 					theArray.splice(cardIndex, 1);
 				}
-			};
+			}
 
-			//if there are no more cards.. 
+			//if there are no more cards..
 			if (wrapper.children.length === 0) {
 				//Give the clear all button a class of hide
 				document.getElementById("clear-button").classList.add("hide");
@@ -66,12 +66,12 @@ var Chatty = (function(removeTexts) {
 		} else if (elementClicked.id ==="clear-button") {
 			//If the wrapper element has children
 			if (wrapper.hasChildNodes()) {
-				//add the class of hide to clear-all button 
+				//add the class of hide to clear-all button
 	            elementClicked.classList.add("hide");
 	            //While there are text-cards, remove them
 	            while (wrapper.firstChild) {
 	                wrapper.removeChild(wrapper.firstChild);
-	                createdTexts = [];
+	                 var createdTexts = [];
 	            }
 	        }
 		}
