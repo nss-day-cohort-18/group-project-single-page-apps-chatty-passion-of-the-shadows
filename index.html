@@ -16,7 +16,8 @@
         <div class="navbar-fixed">
         	<nav id="nav">
     			<div class="row" id="nav-wrapper">
-    				<h1 class="col s6 center-align logo">Chatty</h1>
+    				<h1 class="col s5 right-align logo" style="text-align: right">Chatty</h1>
+                    <div id="logo" style="min-height: 49px" class="col s1"><image id="logo-image" src="images/Chatty.png"></div>
     		        <div class="input-field col s5 offset-1s">
 
     		          <textarea id="new-message" class="materialize-textarea" onkeypress="Chatty.createTextMessages()"></textarea>
@@ -29,11 +30,11 @@
     		        		<button type="button" class="clear-button-indigo" id="clear-button">Clear Message Board</button>
     		        	</div>
     		        	<p class="col s4 checkbox">
-					      <input type="checkbox" class="filled-in" id="dark-box" onchange="Chatty.toggleStyles()"/>
+					      <input type="checkbox" class="filled-in" id="dark-box" onchange="toggleStyles()"/>
 					      <label for="dark-box">Dark Theme</label>
 					    </p>
 					    <p class="col s4 checkbox">
-					      <input type="checkbox" class="filled-in" id="large-box" onchange="Chatty.toggleStyles()"/>
+					      <input type="checkbox" class="filled-in" id="large-box" onchange="toggleLargeText()"/>
 					      <label for="large-box">Large Text</label>
 					   </p>
 					</div>

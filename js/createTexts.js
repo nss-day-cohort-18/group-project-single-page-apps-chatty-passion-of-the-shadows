@@ -49,6 +49,10 @@ var Chatty = (function(createTexts) {
 	};
 
 	var idCounter = 0;
+	var theLogo = document.getElementById("logo-image");
+	var changeLogoBack = function() {
+		theLogo.src = "images/Chatty.png";
+	};
 
 	//Function to create Text Cards
 	createTexts.createTextMessages = function() {
@@ -82,6 +86,10 @@ var Chatty = (function(createTexts) {
 				createTexts.toggleDeleteButtonVisibility();
 				//Adding to the counter to keep a unique ID flowing
 				idCounter++;
+				//Toggling the logo
+				theLogo.src = "images/Chatty.gif";
+				setTimeout(changeLogoBack, 1500);
+
 				console.log(createdTexts);
 			}
 		}
