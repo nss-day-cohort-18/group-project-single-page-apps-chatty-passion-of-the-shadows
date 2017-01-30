@@ -42,6 +42,21 @@ var Chatty = (function(removeTexts) {
 		if (elementClicked.classList.contains("delete-button")) {
 			//remove the entire card
 			elementClicked.parentElement.remove();
+			//Removing text input from createdTexts array via id
+			var parentId = elementClicked.parentElement.id;
+			//Create for loop that iterates through createdTexts array
+			//and removes specified text
+			var theArray = Chatty.returnPrivateArray();
+			//For each card in array..
+			for (var cardIndex = 0; cardIndex < theArray.length; cardIndex++) {
+				//If the looged id in the array 
+				//is equal to the id of the card being deleted
+				if (theArray[cardIndex]["cardId"] === parentId) {
+					//splice out the object within the array
+					theArray.splice(cardIndex, 1);
+				}
+			};
+
 			//if there are no more cards.. 
 			if (wrapper.children.length === 0) {
 				//Give the clear all button a class of hide
@@ -56,6 +71,7 @@ var Chatty = (function(removeTexts) {
 	            //While there are text-cards, remove them
 	            while (wrapper.firstChild) {
 	                wrapper.removeChild(wrapper.firstChild);
+	                createdTexts = [];
 	            }
 	        }
 		}
