@@ -2,27 +2,25 @@
 
 
 function toggleStyles(){
-	var elementsToToggle = {
 
-	 	messageCard		: document.getElementsByClassName("message-card"),
-	 	deleteButton	: document.getElementsByClassName("delete-button"),
-	 	messageDisplay	: document.getElementById("message-display"),
-	 	messageWrapper	: document.getElementById("message-wrapper"),
-	 	navElement		: document.getElementById("nav-element"),
-	 	clearButton		: document.getElementById("clear-button"),
-	 	newMessage      : document.getElementById("new-message"),
-	 	// largeText		: document.getElementsByClassName("text-message")
-	};
+	var elementsToToggle = [
+	 		 document.getElementsByClassName("message-card"),
+	 		 document.getElementsByClassName("delete-button"),
+	 		 document.getElementById("message-display"),
+	 		 document.getElementById("message-wrapper"),
+	 		 document.getElementById("nav"),
+	 		 document.getElementById("clear-button"),
+	 	     document.getElementById("new-message"),
+	 	     document.getElementById("text-"),
+	];
 
-	for (element in elementsToToggle) {
-		var currentElement = elementsToToggle[element];
-		console.log('current element in loop:', currentElement)
-		console.log('is array?', Array.isArray(currentElement));
-		if (!Array.isArray(currentElement)) {
-			for (var i = 0; i < currentElement.length; i++) {
-				var className = currentElement.item(i).className;
-				console.log(className)
-				currentElement.item(i).classList.toggle(`${className}-dark`);
+	for (var i = 0; i < elementsToToggle.length; i++) {
+		var currentElement = elementsToToggle[i];
+		if (i < 2) {
+			for (var q = 0; q < currentElement.length; q++) {
+				var className = currentElement.item(q).className;
+				console.log(className);
+				currentElement.item(q).classList.toggle(`${className}-dark`);
 			} 
 		} else {
 		// We grab the id, because we're gonna use it in each
