@@ -63,7 +63,7 @@ var Chatty = (function(createTexts) {
 		if (event.key == "Enter") {
 			event.preventDefault();
 			if (createHtmlElements.userInput.value === "") {
-				alert("How 'bout ya say somethin dummy?");
+				$('#modal1').modal('open');
 				createHtmlElements.userInput.value = "";
 			} else {
 				var textCard = {};
