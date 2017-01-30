@@ -1,4 +1,4 @@
-
+"use strict";
 
 
 function toggleStyles(){
@@ -21,7 +21,7 @@ function toggleStyles(){
 				var className = currentElement.item(q).className;
 				console.log(className);
 				currentElement.item(q).classList.toggle(`${className}-dark`);
-			} 
+			}
 		} else {
 		// We grab the id, because we're gonna use it in each
 		// class name for the dark theme.
@@ -32,13 +32,13 @@ function toggleStyles(){
 		console.log(id);
 
 		// Now we toggle the theme from light to dark.
-		// 
+		//
 		console.log(currentElement.classList);
 		currentElement.classList.toggle(`${id}-dark`);
 		}
-	console.log(elementsToToggle)
+	console.log(elementsToToggle);
 	}
-};
+}
 
 
 
@@ -55,5 +55,5 @@ function toggleLargeText() {
 		} else {
 			textMessageElements.item(i).classList.add("large-text");
 		}
-	};
-};
+	}
+}
