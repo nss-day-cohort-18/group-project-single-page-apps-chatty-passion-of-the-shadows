@@ -42,7 +42,7 @@ var Chatty = (function(createTexts) {
 
 	createTexts.toggleDeleteButtonVisibility = function() {
 		//Re-applying visuals to delete-all button
-		//This function is ONLY being called when a new text is being 
+		//This function is ONLY being called when a new text is being
 		//created. The clear-all button already has a class of hide at this point
 		var wrapper = createHtmlElements.messageDisplayWrapper;
 		createHtmlElements.deleteButton.classList.remove("hide");
@@ -63,7 +63,7 @@ var Chatty = (function(createTexts) {
 		if (event.key == "Enter") {
 			event.preventDefault();
 			if (createHtmlElements.userInput.value === "") {
-				alert("How 'bout ya say somethin dummy?");
+				$('#modal1').modal('open');
 				createHtmlElements.userInput.value = "";
 			} else {
 				var textCard = {};
@@ -78,9 +78,10 @@ var Chatty = (function(createTexts) {
 
 				//Establishing layout of the new card
 				var newCard = `<article id="card--${idCounter}" class="message-card">
-					<p class="text-message">${text}<br>${time}</p>
-					<button class="delete-button">Delete</button>
-					</article>`;
+							   <button class="delete-button waves-effect waves-teal">Delete</button>
+							   <p class="text-message align-right">${text}<br>${time}</p>
+							   </article>`;
+
 
 				//Appending the layout to the wrapper
 				createHtmlElements.messageDisplayWrapper.innerHTML += newCard;
@@ -94,7 +95,23 @@ var Chatty = (function(createTexts) {
 				theLogo.src = "images/Chatty.gif";
 				setTimeout(changeLogoBack, 1500);
 
-				console.log(createdTexts);
+				//From here we are determining wether or not the theme has large text
+				//or the dark grey background. 
+				//Grabbing the dark-themed and large-text checkbox
+				var darkThemeCheckbox = document.getElementsByClassName("checkbox")[0].getElementsByTagName("input")[0];
+				var largeTextCheckbox = document.getElementsByClassName("checkbox")[1].getElementsByTagName("input")[0];
+
+				//grabbing the newly-created text-card
+				var newArticle = createHtmlElements.messageDisplayWrapper.lastChild;
+				//if dark themed is checked, target the message card and delete button and update classes
+				if (darkThemeCheckbox.checked) {
+					newArticle.classList.add("message-card-dark");
+					newArticle.getElementsByTagName("button")[0].classList.add("delete-button-dark");
+				}
+				//if large textbox is checked, target the paragraph within text-card and update class
+				if (largeTextCheckbox.checked) {
+					newArticle.getElementsByTagName("p")[0].classList.add("large-text");
+				}
 			}
 		}
 	};

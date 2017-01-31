@@ -13,29 +13,41 @@
     </head>
     <body onclick="Chatty.deleteClick()">
 
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>Dear User,</h4>
+              <p>Why aren't you talking? Do you not want to connect? Don't you know there are coders that need..<br> A job. A home. Money for food. No longer shall there be penniless coders. No more shall there be jobless nerds. <br> Please. Please for the love of god.. <br> Speak</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Yes Sir</a>
+            </div>
+        </div>
+
         <div class="navbar-fixed">
         	<nav id="nav">
     			<div class="row" id="nav-wrapper">
-    				<h1 class="col s5 right-align logo" style="text-align: right">Chatty</h1>
+    				<h1 class="col s3 right-align logo" style="text-align: right">Chatty</h1>
                     <div id="logo" style="min-height: 49px" class="col s1"><image id="logo-image" src="images/Chatty.png"></div>
-    		        <div class="input-field col s5 offset-1s">
+    		        <div class="input-field col s5">
 
-    		          <textarea id="new-message" class="materialize-textarea" onkeypress="Chatty.createTextMessages()"></textarea>
+    		          <textarea data-position="bottom" data-tooltip="Send a message to connect! Press 'Return' when your done." id="new-message" class="materialize-textarea tooltipped" onkeypress="Chatty.createTextMessages()"></textarea>
 
     		          <label for="new-message">Enter Message Here:</label>
     		        </div>
 
     		        <div class="row" id="style-wrapper">
-    		        	<div class="col s4">
-    		        		<button type="button" class="clear-button-indigo" id="clear-button">Clear Message Board</button>
+    		        	<div id="clear-button-container" class="col s4">
+
+    		        		<button type="button" class="clear-button-indigo waves-effect waves-teal" id="clear-button">Clear Message Board</button>
+
     		        	</div>
     		        	<p class="col s4 checkbox">
 					      <input type="checkbox" class="filled-in" id="dark-box" onchange="toggleStyles()"/>
-					      <label for="dark-box">Dark Theme</label>
+					      <label for="dark-box" class="greyFont">Dark Theme</label>
 					    </p>
 					    <p class="col s4 checkbox">
 					      <input type="checkbox" class="filled-in" id="large-text" onchange="toggleLargeText()"/>
-					      <label for="large-text">Large Text</label>
+					      <label for="large-text" class="greyFont">Large Text</label>
 					   </p>
 					</div>
     			</div>
@@ -54,5 +66,22 @@
         <script type="text/javascript" src="js/removeTexts.js"></script>
         <script type="text/javascript" src="js/toggle.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.tooltipped').tooltip({delay: 50});
+            });
+            $(document).ready(function(){
+                // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+                $('.modal').modal({
+                    dismissible: false,
+                    opacity: 1,
+                    inDuration: 5000,
+                    outDuration: 5000,
+                    startingTop: '20%',
+                    endingTop: '4%',
+                    complete: function() {alert("Don't let it happen again.")}
+                });
+            });
+        </script>
     </body>
 </html>
