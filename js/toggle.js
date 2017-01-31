@@ -85,9 +85,6 @@ function toggleNav() {
 }
 
 
-
-
-
 ///Large Text Toggle
 
 function toggleLargeText() {
@@ -100,4 +97,27 @@ function toggleLargeText() {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

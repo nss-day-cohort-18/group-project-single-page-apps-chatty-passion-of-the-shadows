@@ -55,11 +55,20 @@
         </div>
 
 		<div id="message-wrapper">
-			<h4 class="center-align" id="message-header">Messages:</h4>
-			<div id="message-display">
+			<h4 class="center-align col s6" id="message-header">Messages:</h4>
 
+            <div id="user-select" class="input-field col s3" onchange="Chatty.userToggle()">
+                <select>
+                  <option value="" disabled selected>Choose User</option>
+                  <option value="1">Employer</option>
+                  <option value="2">Employee</option>
+                </select>
+            </div>
+
+			<div id="message-display">
             </div>
 		</div>
+
 
         <script type="text/javascript" src="js/initialTexts.js"></script>
         <script type="text/javascript" src="js/createTexts.js"></script>
@@ -69,8 +78,6 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 $('.tooltipped').tooltip({delay: 50});
-            });
-            $(document).ready(function(){
                 // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
                 $('.modal').modal({
                     dismissible: false,
@@ -81,6 +88,7 @@
                     endingTop: '4%',
                     complete: function() {alert("Don't let it happen again.")}
                 });
+                $('select').material_select();
             });
         </script>
 

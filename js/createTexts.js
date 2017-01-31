@@ -54,6 +54,8 @@ var Chatty = (function(createTexts) {
 		theLogo.src = "images/Chatty.png";
 	};
 
+	var myUser;
+
 	//Function to create Text Cards
 	createTexts.createTextMessages = function() {
 		//1. Check if user presses enter key
@@ -73,10 +75,20 @@ var Chatty = (function(createTexts) {
 				createdTexts.push(textCard);
 				var text = createHtmlElements.userInput.value;
 				//Establishing layout of the new card
+
 				var newCard = `<article id="card--${idCounter}" class="message-card">
 					<button class="delete-button waves-effect waves-teal">Delete</button>
 					<p class="text-message align-right">${text}</p>
 					</article>`;
+					
+				if (myUser === "Employer") {
+					newCard =  `<article id="card--${idCounter}" class="message-card">
+								<p class="text-message align-left">${text}</p>
+								<button class="delete-button waves-effect waves-teal">Delete</button>
+								</article>`; 
+				}
+
+
 
 				//Appending the layout to the wrapper
 				createHtmlElements.messageDisplayWrapper.innerHTML += newCard;
@@ -125,6 +137,10 @@ var Chatty = (function(createTexts) {
 
 	createTexts.returnPrivateArray = function() {
 		return createdTexts;
+	};
+
+	createTexts.userToggle = function() {
+		myUser = event.target.innerHTML;
 	};
 
 
