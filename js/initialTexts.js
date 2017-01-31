@@ -47,32 +47,24 @@ var Chatty = (function(initialTexts) {
 	//===============================//
 
 	//Parse JSON data and send results to loadPreMessages()
-	//
 	function dataRequestComplete(event){
-		console.log('Transfer from json file complete');
 		var data = JSON.parse(event.target.responseText);
-		console.log(data);
 		Chatty.loadPreMessages(data);
 	}
 
 	//Failure notification for XHR
-	//
 	function dataRequestFailed(event){
 		console.log('An error occured while transferring the file');
 		console.log('Seeing as this is a local data transfer, this is surely Zak\'s fault');
 	}
 
 	//Generic functionality to return messages
-	//
 	initialTexts.returnMessage = function(messageObject, index ){
 		var message = messageObject[index].message;
-		// console.log('returnMessage output ', message);
-
 		return message;
 	};
 
 	//Generic function to create new message Card
-	//
 	initialTexts.loadElement = function(index ){
 		initialHtmlElements.messageDisplay.innerHTML += newCard;
 		var messageCards = document.getElementsByClassName("message-card");
@@ -84,12 +76,8 @@ var Chatty = (function(initialTexts) {
 	};
 
 	//Prints a message to a specific message card
-	//
 	initialTexts.printMessage = function(messageElement, message ){
-
 		var cardChildren = messageElement.childNodes;
-		console.log(cardChildren);
-		// console.log(message);
 		cardChildren.forEach(function(value, index, array){
 
 			// console.log(value, array[index]);
@@ -97,23 +85,16 @@ var Chatty = (function(initialTexts) {
 				value.innerHTML = message;
 			}
 		});
-
-		console.log('Printed: ', message);
 	};
 
 	//Combine the previous three functions to print to screen
-	//
 	initialTexts.loadPreMessages = function(messageObject ){
-
 		for (var i = 0; i < messageObject.length; i++) {
 			var message = Chatty.returnMessage(messageObject, i);
 			var target = Chatty.loadElement(i);
-
 			Chatty.printMessage(target, message);
 		}
 	};
-
-
 
 	//============================//
 	//===========RETURN===========//

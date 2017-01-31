@@ -1,6 +1,5 @@
 "use strict";
 
-
 function toggleStyles(){
 	toggleMessageCard();
 	toggleDeleteButton();
@@ -83,10 +82,6 @@ function toggleNav() {
 		}
 	}
 }
-
-
-
-
 
 ///Large Text Toggle
 
