@@ -16,13 +16,13 @@
 .materialize-red-text.text-lighten-4 {
   color: #f8c1c3 !important; }
 
-.materialize-red.lighten-3, .materialize-red.delete-button-dark, .materialize-red.message-display-dark, .materialize-red.nav-dark {
+.materialize-red.lighten-3, .materialize-red.delete-button-dark, .materialize-red#message-display, .materialize-red.message-display-dark, .materialize-red.nav-dark {
   background-color: #f3989b !important; }
 
 .materialize-red-text.text-lighten-3 {
   color: #f3989b !important; }
 
-.materialize-red.lighten-2, .materialize-red#message-display {
+.materialize-red.lighten-2 {
   background-color: #ee6e73 !important; }
 
 .materialize-red-text.text-lighten-2 {
@@ -76,13 +76,13 @@
 .red-text.text-lighten-4 {
   color: #FFCDD2 !important; }
 
-.red.lighten-3, .red.delete-button-dark, .red.message-display-dark, .red.nav-dark {
+.red.lighten-3, .red.delete-button-dark, .red#message-display, .red.message-display-dark, .red.nav-dark {
   background-color: #EF9A9A !important; }
 
 .red-text.text-lighten-3 {
   color: #EF9A9A !important; }
 
-.red.lighten-2, .red#message-display {
+.red.lighten-2 {
   background-color: #E57373 !important; }
 
 .red-text.text-lighten-2 {
@@ -160,13 +160,13 @@
 .pink-text.text-lighten-4 {
   color: #f8bbd0 !important; }
 
-.pink.lighten-3, .pink.delete-button-dark, .pink.message-display-dark, .pink.nav-dark {
+.pink.lighten-3, .pink.delete-button-dark, .pink#message-display, .pink.message-display-dark, .pink.nav-dark {
   background-color: #f48fb1 !important; }
 
 .pink-text.text-lighten-3 {
   color: #f48fb1 !important; }
 
-.pink.lighten-2, .pink#message-display {
+.pink.lighten-2 {
   background-color: #f06292 !important; }
 
 .pink-text.text-lighten-2 {
@@ -244,13 +244,13 @@
 .purple-text.text-lighten-4 {
   color: #e1bee7 !important; }
 
-.purple.lighten-3, .purple.delete-button-dark, .purple.message-display-dark, .purple.nav-dark {
+.purple.lighten-3, .purple.delete-button-dark, .purple#message-display, .purple.message-display-dark, .purple.nav-dark {
   background-color: #ce93d8 !important; }
 
 .purple-text.text-lighten-3 {
   color: #ce93d8 !important; }
 
-.purple.lighten-2, .purple#message-display {
+.purple.lighten-2 {
   background-color: #ba68c8 !important; }
 
 .purple-text.text-lighten-2 {
@@ -328,13 +328,13 @@
 .deep-purple-text.text-lighten-4 {
   color: #d1c4e9 !important; }
 
-.deep-purple.lighten-3, .deep-purple.delete-button-dark, .deep-purple.message-display-dark, .deep-purple.nav-dark {
+.deep-purple.lighten-3, .deep-purple.delete-button-dark, .deep-purple#message-display, .deep-purple.message-display-dark, .deep-purple.nav-dark {
   background-color: #b39ddb !important; }
 
 .deep-purple-text.text-lighten-3 {
   color: #b39ddb !important; }
 
-.deep-purple.lighten-2, .deep-purple#message-display {
+.deep-purple.lighten-2 {
   background-color: #9575cd !important; }
 
 .deep-purple-text.text-lighten-2 {
@@ -412,13 +412,13 @@
 .indigo-text.text-lighten-4 {
   color: #c5cae9 !important; }
 
-.indigo.lighten-3, .lighten-3.message-card, .lighten-3.message-card-dark, .message-card-dark.message-display-dark, .message-card-dark.nav-dark, .message-card.message-display-dark, .message-card.nav-dark, .lighten-3.delete-button, .delete-button-dark, .delete-button.message-display-dark, .delete-button.nav-dark, .delete-button-dark#message-display, .lighten-3#message-display, #message-display.message-display-dark, #message-display.nav-dark, .indigo.message-display-dark, .message-display-dark.clear-button-indigo, .message-display-dark.clear-button-dark, .message-display-dark.materialize-textarea, .message-display-dark.materialize-textarea-dark, .lighten-3.clear-button-indigo, .lighten-3.clear-button-dark, .clear-button-dark.nav-dark, .clear-button-indigo.nav-dark, .indigo.nav-dark, .nav-dark.materialize-textarea, .nav-dark.materialize-textarea-dark, .lighten-3.materialize-textarea, .lighten-3.materialize-textarea-dark {
+.indigo.lighten-3, .lighten-3.message-card, .lighten-3.message-card-dark, .message-card-dark.message-display-dark, .message-card-dark.nav-dark, .message-card.message-display-dark, .message-card.nav-dark, .lighten-3.delete-button, .delete-button-dark, .delete-button.message-display-dark, .delete-button.nav-dark, #message-display, .indigo.message-display-dark, .message-display-dark.clear-button-indigo, .message-display-dark.clear-button-dark, .message-display-dark.materialize-textarea, .message-display-dark.materialize-textarea-dark, .lighten-3.clear-button-indigo, .lighten-3.clear-button-dark, .clear-button-dark.nav-dark, .clear-button-indigo.nav-dark, .indigo.nav-dark, .nav-dark.materialize-textarea, .nav-dark.materialize-textarea-dark, .lighten-3.materialize-textarea, .lighten-3.materialize-textarea-dark {
   background-color: #9fa8da !important; }
 
 .indigo-text.text-lighten-3 {
   color: #9fa8da !important; }
 
-.indigo.lighten-2, .lighten-2.message-card, .lighten-2.message-card-dark, .lighten-2.delete-button, .lighten-2.delete-button-dark, #message-display, .lighten-2.clear-button-indigo, .lighten-2.clear-button-dark, .lighten-2.materialize-textarea, .lighten-2.materialize-textarea-dark {
+.indigo.lighten-2, .lighten-2.message-card, .lighten-2.message-card-dark, .lighten-2.delete-button, .lighten-2.delete-button-dark, .lighten-2#message-display, .lighten-2.clear-button-indigo, .lighten-2.clear-button-dark, .lighten-2.materialize-textarea, .lighten-2.materialize-textarea-dark {
   background-color: #7986cb !important; }
 
 .indigo-text.text-lighten-2 {
@@ -496,13 +496,13 @@
 .blue-text.text-lighten-4 {
   color: #BBDEFB !important; }
 
-.blue.lighten-3, .blue.delete-button-dark, .blue.message-display-dark, .blue.nav-dark {
+.blue.lighten-3, .blue.delete-button-dark, .blue#message-display, .blue.message-display-dark, .blue.nav-dark {
   background-color: #90CAF9 !important; }
 
 .blue-text.text-lighten-3 {
   color: #90CAF9 !important; }
 
-.blue.lighten-2, .blue#message-display {
+.blue.lighten-2 {
   background-color: #64B5F6 !important; }
 
 .blue-text.text-lighten-2 {
@@ -580,13 +580,13 @@
 .light-blue-text.text-lighten-4 {
   color: #b3e5fc !important; }
 
-.light-blue.lighten-3, .light-blue.delete-button-dark, .light-blue.message-display-dark, .light-blue.nav-dark {
+.light-blue.lighten-3, .light-blue.delete-button-dark, .light-blue#message-display, .light-blue.message-display-dark, .light-blue.nav-dark {
   background-color: #81d4fa !important; }
 
 .light-blue-text.text-lighten-3 {
   color: #81d4fa !important; }
 
-.light-blue.lighten-2, .light-blue#message-display {
+.light-blue.lighten-2 {
   background-color: #4fc3f7 !important; }
 
 .light-blue-text.text-lighten-2 {
@@ -664,13 +664,13 @@
 .cyan-text.text-lighten-4 {
   color: #b2ebf2 !important; }
 
-.cyan.lighten-3, .cyan.delete-button-dark, .cyan.message-display-dark, .cyan.nav-dark {
+.cyan.lighten-3, .cyan.delete-button-dark, .cyan#message-display, .cyan.message-display-dark, .cyan.nav-dark {
   background-color: #80deea !important; }
 
 .cyan-text.text-lighten-3 {
   color: #80deea !important; }
 
-.cyan.lighten-2, .cyan#message-display {
+.cyan.lighten-2 {
   background-color: #4dd0e1 !important; }
 
 .cyan-text.text-lighten-2 {
@@ -748,13 +748,13 @@
 .teal-text.text-lighten-4 {
   color: #b2dfdb !important; }
 
-.teal.lighten-3, .teal.delete-button-dark, .teal.message-display-dark, .teal.nav-dark {
+.teal.lighten-3, .teal.delete-button-dark, .teal#message-display, .teal.message-display-dark, .teal.nav-dark {
   background-color: #80cbc4 !important; }
 
 .teal-text.text-lighten-3 {
   color: #80cbc4 !important; }
 
-.teal.lighten-2, .teal#message-display {
+.teal.lighten-2 {
   background-color: #4db6ac !important; }
 
 .teal-text.text-lighten-2 {
@@ -832,13 +832,13 @@
 .green-text.text-lighten-4 {
   color: #C8E6C9 !important; }
 
-.green.lighten-3, .green.delete-button-dark, .green.message-display-dark, .green.nav-dark {
+.green.lighten-3, .green.delete-button-dark, .green#message-display, .green.message-display-dark, .green.nav-dark {
   background-color: #A5D6A7 !important; }
 
 .green-text.text-lighten-3 {
   color: #A5D6A7 !important; }
 
-.green.lighten-2, .green#message-display {
+.green.lighten-2 {
   background-color: #81C784 !important; }
 
 .green-text.text-lighten-2 {
@@ -916,13 +916,13 @@
 .light-green-text.text-lighten-4 {
   color: #dcedc8 !important; }
 
-.light-green.lighten-3, .light-green.delete-button-dark, .light-green.message-display-dark, .light-green.nav-dark {
+.light-green.lighten-3, .light-green.delete-button-dark, .light-green#message-display, .light-green.message-display-dark, .light-green.nav-dark {
   background-color: #c5e1a5 !important; }
 
 .light-green-text.text-lighten-3 {
   color: #c5e1a5 !important; }
 
-.light-green.lighten-2, .light-green#message-display {
+.light-green.lighten-2 {
   background-color: #aed581 !important; }
 
 .light-green-text.text-lighten-2 {
@@ -1000,13 +1000,13 @@
 .lime-text.text-lighten-4 {
   color: #f0f4c3 !important; }
 
-.lime.lighten-3, .lime.delete-button-dark, .lime.message-display-dark, .lime.nav-dark {
+.lime.lighten-3, .lime.delete-button-dark, .lime#message-display, .lime.message-display-dark, .lime.nav-dark {
   background-color: #e6ee9c !important; }
 
 .lime-text.text-lighten-3 {
   color: #e6ee9c !important; }
 
-.lime.lighten-2, .lime#message-display {
+.lime.lighten-2 {
   background-color: #dce775 !important; }
 
 .lime-text.text-lighten-2 {
@@ -1084,13 +1084,13 @@
 .yellow-text.text-lighten-4 {
   color: #fff9c4 !important; }
 
-.yellow.lighten-3, .yellow.delete-button-dark, .yellow.message-display-dark, .yellow.nav-dark {
+.yellow.lighten-3, .yellow.delete-button-dark, .yellow#message-display, .yellow.message-display-dark, .yellow.nav-dark {
   background-color: #fff59d !important; }
 
 .yellow-text.text-lighten-3 {
   color: #fff59d !important; }
 
-.yellow.lighten-2, .yellow#message-display {
+.yellow.lighten-2 {
   background-color: #fff176 !important; }
 
 .yellow-text.text-lighten-2 {
@@ -1168,13 +1168,13 @@
 .amber-text.text-lighten-4 {
   color: #ffecb3 !important; }
 
-.amber.lighten-3, .amber.delete-button-dark, .amber.message-display-dark, .amber.nav-dark {
+.amber.lighten-3, .amber.delete-button-dark, .amber#message-display, .amber.message-display-dark, .amber.nav-dark {
   background-color: #ffe082 !important; }
 
 .amber-text.text-lighten-3 {
   color: #ffe082 !important; }
 
-.amber.lighten-2, .amber#message-display {
+.amber.lighten-2 {
   background-color: #ffd54f !important; }
 
 .amber-text.text-lighten-2 {
@@ -1252,13 +1252,13 @@
 .orange-text.text-lighten-4 {
   color: #ffe0b2 !important; }
 
-.orange.lighten-3, .orange.delete-button-dark, .orange.message-display-dark, .orange.nav-dark {
+.orange.lighten-3, .orange.delete-button-dark, .orange#message-display, .orange.message-display-dark, .orange.nav-dark {
   background-color: #ffcc80 !important; }
 
 .orange-text.text-lighten-3 {
   color: #ffcc80 !important; }
 
-.orange.lighten-2, .orange#message-display {
+.orange.lighten-2 {
   background-color: #ffb74d !important; }
 
 .orange-text.text-lighten-2 {
@@ -1336,13 +1336,13 @@
 .deep-orange-text.text-lighten-4 {
   color: #ffccbc !important; }
 
-.deep-orange.lighten-3, .deep-orange.delete-button-dark, .deep-orange.message-display-dark, .deep-orange.nav-dark {
+.deep-orange.lighten-3, .deep-orange.delete-button-dark, .deep-orange#message-display, .deep-orange.message-display-dark, .deep-orange.nav-dark {
   background-color: #ffab91 !important; }
 
 .deep-orange-text.text-lighten-3 {
   color: #ffab91 !important; }
 
-.deep-orange.lighten-2, .deep-orange#message-display {
+.deep-orange.lighten-2 {
   background-color: #ff8a65 !important; }
 
 .deep-orange-text.text-lighten-2 {
@@ -1420,13 +1420,13 @@
 .brown-text.text-lighten-4 {
   color: #d7ccc8 !important; }
 
-.brown.lighten-3, .brown.delete-button-dark, .brown.message-display-dark, .brown.nav-dark {
+.brown.lighten-3, .brown.delete-button-dark, .brown#message-display, .brown.message-display-dark, .brown.nav-dark {
   background-color: #bcaaa4 !important; }
 
 .brown-text.text-lighten-3 {
   color: #bcaaa4 !important; }
 
-.brown.lighten-2, .brown#message-display {
+.brown.lighten-2 {
   background-color: #a1887f !important; }
 
 .brown-text.text-lighten-2 {
@@ -1480,13 +1480,13 @@
 .blue-grey-text.text-lighten-4 {
   color: #cfd8dc !important; }
 
-.blue-grey.lighten-3, .blue-grey.delete-button-dark, .blue-grey.message-display-dark, .blue-grey.nav-dark {
+.blue-grey.lighten-3, .blue-grey.delete-button-dark, .blue-grey#message-display, .blue-grey.message-display-dark, .blue-grey.nav-dark {
   background-color: #b0bec5 !important; }
 
 .blue-grey-text.text-lighten-3 {
   color: #b0bec5 !important; }
 
-.blue-grey.lighten-2, .blue-grey#message-display {
+.blue-grey.lighten-2 {
   background-color: #90a4ae !important; }
 
 .blue-grey-text.text-lighten-2 {
@@ -1540,13 +1540,13 @@
 .grey-text.text-lighten-4 {
   color: #f5f5f5 !important; }
 
-.grey.lighten-3, .lighten-3.message-card-dark, .delete-button-dark, .message-display-dark, .lighten-3.clear-button-dark, .lighten-3.message-wrapper-dark, .nav-dark, .lighten-3.materialize-textarea-dark {
+.grey.lighten-3, .lighten-3.message-card-dark, .message-card-dark#message-display, .delete-button-dark, .grey#message-display, #message-display.delete-button-dark, #message-display.message-display-dark, #message-display.clear-button-dark, #message-display.message-wrapper-dark, #message-display.nav-dark, #message-display.materialize-textarea-dark, .message-display-dark, .lighten-3.clear-button-dark, .lighten-3.message-wrapper-dark, .nav-dark, .lighten-3.materialize-textarea-dark {
   background-color: #eeeeee !important; }
 
 .grey-text.text-lighten-3 {
   color: #eeeeee !important; }
 
-.grey.lighten-2, .lighten-2.message-card-dark, .message-card-dark#message-display, .lighten-2.delete-button-dark, .delete-button-dark#message-display, .grey#message-display, #message-display.message-display-dark, #message-display.clear-button-dark, #message-display.message-wrapper-dark, #message-display.nav-dark, #message-display.materialize-textarea-dark, .lighten-2.message-display-dark, .lighten-2.clear-button-dark, .lighten-2.message-wrapper-dark, .lighten-2.nav-dark, .lighten-2.materialize-textarea-dark {
+.grey.lighten-2, .lighten-2.message-card-dark, .lighten-2.delete-button-dark, .lighten-2.message-display-dark, .lighten-2.clear-button-dark, .lighten-2.message-wrapper-dark, .lighten-2.nav-dark, .lighten-2.materialize-textarea-dark {
   background-color: #e0e0e0 !important; }
 
 .grey-text.text-lighten-2 {
@@ -5120,6 +5120,12 @@ input[type=range]:focus::-ms-fill-upper {
     opacity: 1; }
   to {
     opacity: 0; } }
+.modal {
+  box-shadow: 0px 0px 100px 20px #009688; }
+
+.message-card, .message-card-dark {
+  border-bottom: 3px solid #009688; }
+
 .message-card-dark {
   color: #fff; }
 
@@ -5164,7 +5170,8 @@ nav {
   height: auto;
   margin: 0;
   padding: 0;
-  background-color: #6775BB; }
+  background-color: #9FA8DA;
+  border-bottom: 5px solid #009688; }
 
 .nav-dark {
   color: #000; }
@@ -5176,6 +5183,20 @@ nav {
   font-family: 'VT323', 'Share Tech Mono', monospace; }
 
 #message-display {
-  min-height: 200px !important; }
+  min-height: 200px !important;
+  border-bottom: 5px solid #009688; }
+
+.greyFont {
+  color: #424242 !important; }
+
+button {
+  border-bottom: 1px solid #009688 !important; }
+
+.backdrop,
+.modal-overlay {
+  background-color: #009688; }
+
+.align-right {
+  text-align: right; }
 
 /*# sourceMappingURL=styles.css.map */

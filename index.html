@@ -16,10 +16,10 @@
         <div id="modal1" class="modal">
             <div class="modal-content">
               <h4>Dear User,</h4>
-              <p>Why aren't you talking? Why do you not speak? Don't you know there are coders that need..<br> A job. A home. Money for food. No longer shall there be penniless coders. No more shall there be jobless nerds. <br> Please. Please for the love of god.. <br> Speak</p>
+              <p>Why aren't you talking? Do you not want to connect? Don't you know there are coders that need..<br> A job. A home. Money for food. No longer shall there be penniless coders. No more shall there be jobless nerds. <br> Please. Please for the love of god.. <br> Speak</p>
             </div>
             <div class="modal-footer">
-              <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Yes Sir</a>
+              <a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Yes Sir</a>
             </div>
         </div>
 
@@ -30,22 +30,22 @@
                     <div id="logo" style="min-height: 49px" class="col s1"><image id="logo-image" src="images/Chatty.png"></div>
     		        <div class="input-field col s5 offset-1s">
 
-    		          <textarea data-position="bottom" data-tooltip="Send a message to connect!" id="new-message" class="materialize-textarea tooltipped" onkeypress="Chatty.createTextMessages()"></textarea>
+    		          <textarea data-position="bottom" data-tooltip="Send a message to connect! Press 'Return' when your done." id="new-message" class="materialize-textarea tooltipped" onkeypress="Chatty.createTextMessages()"></textarea>
 
     		          <label for="new-message">Enter Message Here:</label>
     		        </div>
 
     		        <div class="row" id="style-wrapper">
-    		        	<div class="col s4">
+    		        	<div id="clear-button-container" class="col s4">
     		        		<button type="button" class="clear-button-indigo" id="clear-button">Clear Message Board</button>
     		        	</div>
     		        	<p class="col s4 checkbox">
 					      <input type="checkbox" class="filled-in" id="dark-box" onchange="toggleStyles()"/>
-					      <label for="dark-box">Dark Theme</label>
+					      <label for="dark-box" class="greyFont">Dark Theme</label>
 					    </p>
 					    <p class="col s4 checkbox">
 					      <input type="checkbox" class="filled-in" id="large-text" onchange="toggleLargeText()"/>
-					      <label for="large-text">Large Text</label>
+					      <label for="large-text" class="greyFont">Large Text</label>
 					   </p>
 					</div>
     			</div>
