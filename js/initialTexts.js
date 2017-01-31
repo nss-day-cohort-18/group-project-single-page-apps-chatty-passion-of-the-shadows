@@ -11,21 +11,21 @@ var Chatty = (function(initialTexts) {
 	//===============================//
 	//===========VARIABLES===========//
 	//===============================//
-	
+
 	//Card html elements for messages
 	//
 
 	var newCard =  `<article class="message-card">
 	                    <p class="text-message"></p>
 	                    <button class="delete-button">Delete</button>
-	                </article>`; 
+	                </article>`;
 
 
 	//data request object and error/completion messages.
 	//(shamelessly cribbed from the 'brendalong')
 	//
 	var dataRequest = new XMLHttpRequest();
-	
+
 	dataRequest.addEventListener('load', dataRequestComplete);
 	dataRequest.addEventListener('error', dataRequestFailed);
 
@@ -33,7 +33,7 @@ var Chatty = (function(initialTexts) {
 	dataRequest.send();
 
 
-	//Object that  contains all HTML elements needed 
+	//Object that  contains all HTML elements needed
 	//for this IIFE
 	//
  	var initialHtmlElements = {
@@ -45,7 +45,7 @@ var Chatty = (function(initialTexts) {
 	//===============================//
 	//===========FUNCTIONS===========//
 	//===============================//
-	
+
 	//Parse JSON data and send results to loadPreMessages()
 	//
 	function dataRequestComplete(event){
@@ -67,7 +67,7 @@ var Chatty = (function(initialTexts) {
 	initialTexts.returnMessage = function(messageObject, index ){
 		var message = messageObject[index].message;
 		// console.log('returnMessage output ', message);
-		
+
 		return message;
 	};
 
@@ -79,19 +79,19 @@ var Chatty = (function(initialTexts) {
 		var targetCard = messageCards[messageCards.length-1];
 		targetCard.setAttribute("id", ` message${index}`);
 		// console.log('targetCard = ', targetCard);
-		
-		return targetCard;	
+
+		return targetCard;
 	};
 
 	//Prints a message to a specific message card
 	//
 	initialTexts.printMessage = function(messageElement, message ){
-		
+
 		var cardChildren = messageElement.childNodes;
 		console.log(cardChildren);
 		// console.log(message);
 		cardChildren.forEach(function(value, index, array){
-			
+
 			// console.log(value, array[index]);
 			if (value.nodeName === 'P') {
 				value.innerHTML = message;
