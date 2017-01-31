@@ -26,11 +26,85 @@
 @import "components/preloader";
 
 
+//Global Styles
+.greyFont {
+	color: #424242 !important;
+}
+
+button {
+	border-bottom: 1px solid #009688 !important;
+}
+
+* {
+	font-family: 'VT323', 'Share Tech Mono', monospace;
+}
 
 
 
-.modal {
-	box-shadow: 0px 0px 100px 20px #009688;
+
+//Nav Style Elements
+nav {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #9FA8DA;
+    border-bottom: 5px solid #009688;
+}
+.logo {
+	@extend .col;
+	@extend .s12;
+	@extend .center-align;
+	font-size: 3em;
+	margin: 0 0 .5em 0;
+	padding: 0;
+	color: #009688;
+	min-height: 49px;
+}
+#nav-wrapper {
+	margin-bottom: 0;
+}
+#style-wrapper {
+	line-height: 1em;
+	margin-top: 1em;
+}
+.checkbox {
+	margin: 0;
+	padding: 0;
+}
+.materialize-textarea {
+	@extend .indigo;
+	@extend .lighten-4;
+}
+.clear-button-indigo {
+	@extend .indigo;
+	@extend .btn;
+	@extend .col;
+	@extend .offset-s2;
+	@extend .s8;
+}
+.input-field {
+	margin-left: 50px !important;
+}
+
+
+
+//Message Styles
+#message-display {
+	@extend .col;
+	@extend .s10;
+	@extend .offset-s1;
+	@extend .card-panel;
+	@extend .indigo;
+	@extend .lighten-3;
+	min-height: 200px !important;
+	border-bottom: 5px solid #009688;
+}
+#message-wrapper {
+	padding-top: 150px;
+	@extend .row;
+}
+.align-right {
+	text-align: right;
 }
 
 .message-card {
@@ -43,14 +117,12 @@
 	@extend .row;
 	border-bottom: 3px solid #009688;
 }
+#new-message {
+	margin: 0 0 .5em 0;
+	padding: 0;
+	line-height: 1em;
 
-.message-card-dark {
-	@extend .message-card;
-	@extend .grey;
-	@extend .darken-3;
-	color: #fff;
 }
-
 .text-message {
 	@extend .flow-text;
 	@extend .col;
@@ -66,151 +138,62 @@
 	@extend .valign;
 }
 
-.delete-button-dark {
-	@extend .delete-button;
-	@extend .grey;
-	@extend .lighten-3;
-	color: #000;
+
+
+//Modal Styles
+.modal {
+	box-shadow: 0px 0px 100px 20px #009688;
+}
+.backdrop,
+.modal-overlay {
+    background-color: #009688;
 }
 
-#message-display {
-	@extend .col;
-	@extend .s10;
-	@extend .offset-s1;
-	@extend .card-panel;
-	@extend .indigo;
-	@extend .lighten-3;
-}
 
-.message-display-dark {
-	@extend .grey;
-	@extend .lighten-3;
-}
 
-#clear-button {
-	@extend .btn;
-	@extend .waves-effect;
-	@extend .waves-teal;
-	@extend .col;
-	@extend .offset-s2;
-	@extend .s8;
-}
-
-.clear-button-indigo {
-	@extend .indigo;
-}
-
-.clear-button-dark {
-	@extend .clear-button-indigo;
-	@extend .grey;
-	@extend .darken-3;
-	@extend .waves-light;
-}
-
-.logo {
-	@extend .col;
-	@extend .s12;
-	@extend .center-align;
-	font-size: 3em;
-	margin: 0 0 .5em 0;
-	padding: 0;
-	color: #009688;
-}
-
-#logo {
-	min-height: 49px;
-}
-
+//Large Text Class
 .large-text {
 	font-size: 4em;
 }
 
-#style-wrapper {
-	line-height: 1em;
-	margin-top: 1em;
-}
 
-#new-message {
-	margin: 0 0 .5em 0;
-	padding: 0;
-	line-height: 1em;
 
-}
-
-.checkbox {
-	margin: 0;
-	padding: 0;
-}
-
-#message-wrapper {
-	padding-top: 150px;
-	@extend .row;
-}
-
-.message-wrapper-dark {
-	@extend .grey;
-	@extend .darken-3;
-	color: #fff;
-}
-
-#nav-wrapper {
-	margin-bottom: 0;
-}
-
-nav {
-    height: auto;
-    margin: 0;
-    padding: 0;
-    background-color: #9FA8DA;
-    border-bottom: 5px solid #009688;
-}
-
-.nav-dark {
-	@extend .grey;
-	@extend .lighten-3;
-	color: #000;
-}
-
-.materialize-textarea {
-	@extend .indigo;
-	@extend .lighten-4;
-}
-
+//Dark Theme
 .materialize-textarea-dark {
 	@extend .materialize-textarea;
 	@extend .grey;
 	@extend .darken-3;
 	color: #fff;
 }
-
-* {
-	font-family: 'VT323', 'Share Tech Mono', monospace;
+.message-card-dark {
+	@extend .message-card;
+	@extend .grey;
+	@extend .darken-3;
+	color: #fff;
 }
-
-#message-display {
-	// background-color: black;
-	min-height: 200px !important;
-	border-bottom: 5px solid #009688;
+.nav-dark {
+	@extend .grey;
+	@extend .lighten-3;
+	color: #000;
 }
-
-.greyFont {
-	color: #424242 !important;
+.message-wrapper-dark {
+	@extend .grey;
+	@extend .darken-3;
+	color: #fff;
 }
-
-button {
-	border-bottom: 1px solid #009688 !important;
+.clear-button-dark {
+	@extend .clear-button-indigo;
+	@extend .grey;
+	@extend .darken-3;
+	@extend .waves-light;
 }
-
-.backdrop,
-.modal-overlay {
-    background-color: #009688;
+.delete-button-dark {
+	@extend .delete-button;
+	@extend .grey;
+	@extend .lighten-3;
+	color: #000;
 }
-
-.align-right {
-	text-align: right;
+.message-display-dark {
+	@extend .grey;
+	@extend .lighten-3;
 }
-
-
-
-
-
