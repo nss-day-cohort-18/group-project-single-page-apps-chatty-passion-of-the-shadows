@@ -46,6 +46,7 @@ var Chatty = (function(removeTexts) {
 				if (theArray[cardIndex].cardId === parentId) {
 					//splice out the object within the array
 					theArray.splice(cardIndex, 1);
+					console.log(theArray);
 				}
 			}
 			//if there are no more cards..
