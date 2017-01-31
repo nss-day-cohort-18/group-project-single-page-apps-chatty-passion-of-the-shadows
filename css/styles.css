@@ -5159,6 +5159,9 @@ nav {
   margin: 0;
   padding: 0; }
 
+.input-field {
+  margin-left: 50px !important; }
+
 #message-display {
   min-height: 200px !important;
   border-bottom: 5px solid #009688; }
