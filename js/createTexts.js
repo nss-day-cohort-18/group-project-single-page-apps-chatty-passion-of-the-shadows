@@ -72,11 +72,16 @@ var Chatty = (function(createTexts) {
 				textCard.cardId = "card--" + idCounter;
 				createdTexts.push(textCard);
 				var text = createHtmlElements.userInput.value;
+				var time = getTimeStamp(0); //keep the zero as an argument for now.
+											//when 'romanizeTimeStamp' is ready,
+											//we can change the argument to '1'.   
+
 				//Establishing layout of the new card
 				var newCard = `<article id="card--${idCounter}" class="message-card">
-					<button class="delete-button waves-effect waves-teal">Delete</button>
-					<p class="text-message align-right">${text}</p>
-					</article>`;
+							   <button class="delete-button waves-effect waves-teal">Delete</button>
+							   <p class="text-message align-right">${text}<br>${time}</p>
+							   </article>`;
+
 
 				//Appending the layout to the wrapper
 				createHtmlElements.messageDisplayWrapper.innerHTML += newCard;
