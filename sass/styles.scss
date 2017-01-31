@@ -41,6 +41,7 @@ button {
 
 
 
+
 //Nav Style Elements
 nav {
     height: auto;
@@ -105,6 +106,7 @@ nav {
 .align-right {
 	text-align: right;
 }
+
 .message-card {
 	@extend .col;
 	@extend .s12;
@@ -127,6 +129,7 @@ nav {
 	@extend .s8;
 	@extend .valign;
 }
+
 .delete-button {
 	@extend .btn;
 	@extend .indigo;
