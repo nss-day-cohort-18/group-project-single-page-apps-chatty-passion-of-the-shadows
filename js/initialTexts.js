@@ -17,8 +17,9 @@ var Chatty = (function(initialTexts) {
 
 	var newCard =  `<article class="message-card">
 	                    <p class="text-message"></p>
-	                    <button class="delete-button">Delete</button>
-	                </article>`;
+	                    <button class="delete-button waves-effect waves-teal">Delete</button>
+	                </article>`; 
+
 
 
 	//data request object and error/completion messages.
