@@ -5125,16 +5125,8 @@ input[type=range]:focus::-ms-fill-upper {
     opacity: 1; }
   to {
     opacity: 0; } }
-
 .greyFont {
   color: #424242 !important; }
-
-.modal {
-  box-shadow: 0px 0px 100px 20px #009688; }
-
-.message-card, .message-card-dark {
-  border-bottom: 3px solid #009688; }
-
 
 button {
   border-bottom: 1px solid #009688 !important; }
@@ -5191,8 +5183,7 @@ nav {
 .modal {
   box-shadow: 0px 0px 100px 20px #009688; }
 
-.backdrop,
-.modal-overlay {
+.backdrop {
   background-color: #009688; }
 
 .large-text {
