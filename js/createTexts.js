@@ -11,9 +11,6 @@ var Chatty = (function(createTexts) {
 	//===========VARIABLES===========//
 	//===============================//
 
-	//Start-up to make sure it works
-	var myText2 = "It's working.";
-
 	//Array to hold ALL text messages created
 	//Used in readTextMessages function
 	var createdTexts = [];
@@ -30,15 +27,9 @@ var Chatty = (function(createTexts) {
 		textMessageDeleteButtons: document.getElementsByClassName("delete-button")
 	};
 
-
 	//===============================//
 	//===========FUNCTIONS===========//
 	//===============================//
-
-	//Start-up function tomake sure it's connected.
-	createTexts.makeSureItWorks2 = function() {
-		console.log(myText2, " Location: createTexts.js");
-	};
 
 	createTexts.toggleDeleteButtonVisibility = function() {
 		//Re-applying visuals to delete-all button
@@ -101,9 +92,10 @@ var Chatty = (function(createTexts) {
 				//Toggling the logo
 				theLogo.src = "images/Chatty.gif";
 				setTimeout(changeLogoBack, 1500);
+				console.log(createdTexts);
 
 				//From here we are determining wether or not the theme has large text
-				//or the dark grey background. 
+				//or the dark grey background.
 				//Grabbing the dark-themed and large-text checkbox
 				var darkThemeCheckbox = document.getElementsByClassName("checkbox")[0].getElementsByTagName("input")[0];
 				var largeTextCheckbox = document.getElementsByClassName("checkbox")[1].getElementsByTagName("input")[0];
@@ -125,14 +117,8 @@ var Chatty = (function(createTexts) {
 
 	//This function reads texts back to you from createdTexts array
 	createTexts.readTextMessages = function(text) {
-		console.log("readTextMessages() works. Location: createTexts.js");
 		//To test: Chatty.readTextMessages("id1");
 		return createdTexts[0][text];
-	};
-
-	createTexts.deleteSingleText = function() {
-		var toCheckIfWorks = "deleteSingleText() works. Location: createTexts.js";
-		console.log(toCheckIfWorks);
 	};
 
 	createTexts.returnPrivateArray = function() {
@@ -143,7 +129,6 @@ var Chatty = (function(createTexts) {
 		myUser = event.target.innerHTML;
 	};
 
-
 	//============================//
 	//===========RETURN===========//
 	//============================//
@@ -152,10 +137,6 @@ var Chatty = (function(createTexts) {
 
 })(Chatty || {});
 
-
-//=====================================//
-//===========EVENT-LISTENERS===========//
-//=====================================//
 
 
 
