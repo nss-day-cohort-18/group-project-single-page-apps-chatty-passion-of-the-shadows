@@ -35,6 +35,10 @@ button {
 	border-bottom: 1px solid #009688 !important;
 }
 
+.btn {
+	vertical-align: top;
+}
+
 * {
 	font-family: 'VT323', 'Share Tech Mono', monospace;
 }
@@ -86,6 +90,10 @@ nav {
 	margin-left: 50px !important;
 }
 
+#user-select {
+	display: inline-block;
+}
+
 
 
 //Message Styles
@@ -101,6 +109,8 @@ nav {
 }
 #message-wrapper {
 	padding-top: 150px;
+	padding-bottom: 300px;
+	margin-bottom: 0;
 	@extend .row;
 }
 .align-right {
@@ -128,6 +138,7 @@ nav {
 	@extend .col;
 	@extend .s8;
 	@extend .valign;
+	@extend .truncate;
 }
 
 .delete-button {

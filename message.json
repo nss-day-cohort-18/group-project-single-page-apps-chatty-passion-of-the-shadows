@@ -4,34 +4,34 @@
         	"messageClass": "",
         	"buttonClass": ""
         	},
-        "message": "Welcome to Chatty!"
+        "message": "Welcome to Chatty!<br>-Employer"
     },
     {
         "class": {
         	"messageClass": "push-s4 right-align",
         	"buttonClass": "pull-s8"
         	},
-        "message": "How's it going?!"
+        "message": "How's it going?!<br>-Employer"
     },
     {
         "class": {
         	"messageClass": "",
         	"buttonClass": ""
         	},
-        "message": "FOQIENFSALDNVCMNVQO, FSDJN, DASFINDSA, FOQER, DANVA, OEF, aodhfbfqjf01923s/f.r13ina8sffadf12f a f   dsafssd as feqr adzg bfdg q"
+        "message": "FOQIENFSALDNVCMNVQO, FSDJN, DASFINDSA, FOQER, DANVA, OEF, aodhfbfqjf01923s/f.r13ina8sffadf12f a f   dsafssd as feqr adzg bfdg q<br>-Employer"
     },
     {
         "class": {
         	"messageClass": "push-s4 right-align",
         	"buttonClass": "pull-s8"
         	},
-        "message": ". . ."
+        "message": ". . .<br>-Employer"
     },
     {
         "class": {
         	"messageClass": "",
         	"buttonClass": ""
         	},
-        "message": "Sorry, my cat fell on my keyboard."
+        "message": "Sorry, my cat fell on my keyboard.<br>-Employer"
     }
 ]
