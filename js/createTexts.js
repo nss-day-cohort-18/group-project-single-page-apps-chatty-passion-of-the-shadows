@@ -42,7 +42,7 @@ var Chatty = (function(createTexts) {
 
 	createTexts.toggleDeleteButtonVisibility = function() {
 		//Re-applying visuals to delete-all button
-		//This function is ONLY being called when a new text is being 
+		//This function is ONLY being called when a new text is being
 		//created. The clear-all button already has a class of hide at this point
 		var wrapper = createHtmlElements.messageDisplayWrapper;
 		createHtmlElements.deleteButton.classList.remove("hide");
@@ -74,8 +74,8 @@ var Chatty = (function(createTexts) {
 				var text = createHtmlElements.userInput.value;
 				//Establishing layout of the new card
 				var newCard = `<article id="card--${idCounter}" class="message-card">
-					<p class="text-message">${text}</p>
 					<button class="delete-button">Delete</button>
+					<p class="text-message align-right">${text}</p>
 					</article>`;
 
 				//Appending the layout to the wrapper

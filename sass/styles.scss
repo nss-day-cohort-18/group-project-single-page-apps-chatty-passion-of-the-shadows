@@ -41,6 +41,7 @@
 	@extend .indigo;
 	@extend .lighten-4;
 	@extend .row;
+	border-bottom: 3px solid #009688;
 }
 
 .message-card-dark {
@@ -78,7 +79,7 @@
 	@extend .offset-s1;
 	@extend .card-panel;
 	@extend .indigo;
-	@extend .lighten-2;
+	@extend .lighten-3;
 }
 
 .message-display-dark {
@@ -156,7 +157,8 @@ nav {
     height: auto;
     margin: 0;
     padding: 0;
-    background-color: #6775BB;
+    background-color: #9FA8DA;
+    border-bottom: 5px solid #009688;
 }
 
 .nav-dark {
@@ -183,7 +185,26 @@ nav {
 
 #message-display {
 	min-height: 200px !important;
+	border-bottom: 5px solid #009688;
 }
+
+.greyFont {
+	color: #424242 !important;
+}
+
+button {
+	border-bottom: 1px solid #009688 !important;
+}
+
+.backdrop,
+.modal-overlay {
+    background-color: #009688;
+}
+
+.align-right {
+	text-align: right;
+}
+
 
 
 
