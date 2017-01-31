@@ -23,15 +23,17 @@
         <div class="navbar-fixed">
         	<nav id="nav">
     			<div class="row" id="nav-wrapper">
-    				<h1 class="col s5 right-align logo" style="text-align: right">Chatty</h1>
+    				<h1 class="col s3 right-align logo" style="text-align: right">Chatty</h1>
                     <div id="logo" style="min-height: 49px" class="col s1"><image id="logo-image" src="images/Chatty.png"></div>
-    		        <div class="input-field col s5 offset-1s">
+    		        <div class="input-field col s5">
     		          <textarea data-position="bottom" data-tooltip="Send a message to connect! Press 'Return' when your done." id="new-message" class="materialize-textarea tooltipped" onkeypress="Chatty.createTextMessages()"></textarea>
     		          <label for="new-message">Enter Message Here:</label>
     		        </div>
     		        <div class="row" id="style-wrapper">
-    		        	<div class="col s4">
-    		        		<button type="button" class="clear-button-indigo" id="clear-button">Clear Message Board</button>
+    		        	<div id="clear-button-container" class="col s4">
+
+    		        		<button type="button" class="clear-button-indigo waves-effect waves-teal" id="clear-button">Clear Message Board</button>
+
     		        	</div>
     		        	<p class="col s4 checkbox">
 					      <input type="checkbox" class="filled-in" id="dark-box" onchange="toggleStyles()"/>

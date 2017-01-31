@@ -65,7 +65,7 @@ var Chatty = (function(createTexts) {
 				var text = createHtmlElements.userInput.value;
 				//Establishing layout of the new card
 				var newCard = `<article id="card--${idCounter}" class="message-card">
-					<button class="delete-button">Delete</button>
+					<button class="delete-button waves-effect waves-teal">Delete</button>
 					<p class="text-message align-right">${text}</p>
 					</article>`;
 
