@@ -76,16 +76,16 @@ var Chatty = (function(createTexts) {
 				var text = createHtmlElements.userInput.value;
 				//Establishing layout of the new card
 
-				var newCard = `<article id="card--${idCounter}" class="message-card">
-					<button class="delete-button waves-effect waves-teal">Delete</button>
-					<p class="text-message align-right">${text}</p>
-					</article>`;
+				var	newCard =  `<article id="card--${idCounter}" class="message-card">
+								<button class="delete-button waves-effect waves-teal">Delete</button>
+								<p class="text-message align-right">${text}<br>-User</p>
+								</article>`; 
 					
 				if (myUser === "Employer") {
-					newCard =  `<article id="card--${idCounter}" class="message-card">
-								<p class="text-message align-left">${text}</p>
-								<button class="delete-button waves-effect waves-teal">Delete</button>
-								</article>`; 
+					newCard = `<article id="card--${idCounter}" class="message-card">
+						<p class="text-message align-left">${text}<br>-Employer</p>
+						<button class="delete-button waves-effect waves-teal">Delete</button>
+						</article>`;
 				}
 
 
