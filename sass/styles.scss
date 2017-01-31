@@ -86,17 +86,13 @@
 	@extend .lighten-3;
 }
 
-#clear-button {
-	@extend .btn;
-	@extend .waves-effect;
-	@extend .waves-teal;
-	@extend .col;
-	@extend .offset-s2;
-	@extend .s8;
-}
 
 .clear-button-indigo {
 	@extend .indigo;
+	@extend .btn;
+	@extend .col;
+	@extend .offset-s2;
+	@extend .s8;
 }
 
 .clear-button-dark {
@@ -186,7 +182,6 @@ nav {
 }
 
 #message-display {
-	// background-color: black;
 	min-height: 200px !important;
 }
 
