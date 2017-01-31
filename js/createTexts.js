@@ -90,7 +90,23 @@ var Chatty = (function(createTexts) {
 				theLogo.src = "images/Chatty.gif";
 				setTimeout(changeLogoBack, 1500);
 
-				console.log(createdTexts);
+				//From here we are determining wether or not the theme has large text
+				//or the dark grey background. 
+				//Grabbing the dark-themed and large-text checkbox
+				var darkThemeCheckbox = document.getElementsByClassName("checkbox")[0].getElementsByTagName("input")[0];
+				var largeTextCheckbox = document.getElementsByClassName("checkbox")[1].getElementsByTagName("input")[0];
+
+				//grabbing the newly-created text-card
+				var newArticle = createHtmlElements.messageDisplayWrapper.lastChild;
+				//if dark themed is checked, target the message card and delete button and update classes
+				if (darkThemeCheckbox.checked) {
+					newArticle.classList.add("message-card-dark");
+					newArticle.getElementsByTagName("button")[0].classList.add("delete-button-dark");
+				}
+				//if large textbox is checked, target the paragraph within text-card and update class
+				if (largeTextCheckbox.checked) {
+					newArticle.getElementsByTagName("p")[0].classList.add("large-text");
+				}
 			}
 		}
 	};
