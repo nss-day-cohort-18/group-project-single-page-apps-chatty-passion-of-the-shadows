@@ -85,7 +85,7 @@ var Chatty = (function(initialTexts) {
 
 	//Prints a message to a specific message card
 	//
-	initialTexts.printMessage = function(messageElement, message ){
+	initialTexts.printMessage = function(messageElement, message, time ){
 		
 		var cardChildren = messageElement.childNodes;
 		console.log(cardChildren);
@@ -94,11 +94,9 @@ var Chatty = (function(initialTexts) {
 			
 			// console.log(value, array[index]);
 			if (value.nodeName === 'P') {
-				value.innerHTML = message;
+				value.innerHTML = `${message}<br>${time}`
 			}
 		});
-
-		console.log('Printed: ', message);
 	};
 
 	//Combine the previous three functions to print to screen
@@ -108,8 +106,8 @@ var Chatty = (function(initialTexts) {
 		for (var i = 0; i < messageObject.length; i++) {
 			var message = Chatty.returnMessage(messageObject, i);
 			var target = Chatty.loadElement(i);
-
-			Chatty.printMessage(target, message);
+			var time = new Date();
+			Chatty.printMessage(target, message, time);
 		}
 	};
 
