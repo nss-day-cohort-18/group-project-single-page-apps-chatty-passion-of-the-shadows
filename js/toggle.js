@@ -17,7 +17,7 @@ function toggleMessageCard() {
 	for (var i = 0; i < messageCardElements.length; i++) {
 		if (event.target.checked === false){
 			messageCardElements.item(i).classList.remove("message-card-dark");
-		} else {
+		} else {	
 			messageCardElements.item(i).classList.add("message-card-dark");
 		}
 	}
